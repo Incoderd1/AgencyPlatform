@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "Bch0E7KupAI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Application\\AgencyPlatform.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\siric\\.nuget\\packages\\ardalis.guardclauses\\5.0.0\\ardalis.guardclauses.5.0.0.nupkg.sha512",
+    "C:\\Users\\siric\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\siric\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\siric\\.nuget\\packages\\fluentvalidation\\11.8.0\\fluentvalidation.11.8.0.nupkg.sha512",
+    "C:\\Users\\siric\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\siric\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\siric\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\siric\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\siric\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "AgencyPlatform.Application depende de FluentValidation (>= 11.7.2), pero no se encontró FluentValidation 11.7.2. Se resolvió una mejor coincidencia aproximada de FluentValidation 11.8.0.",
+      "libraryId": "FluentValidation",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}
