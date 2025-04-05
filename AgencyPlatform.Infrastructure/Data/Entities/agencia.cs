@@ -51,9 +51,10 @@ public partial class agencia
 
     public string estado { get; set; } = null!;
 
-    public virtual usuario id_usuarioNavigation { get; set; } = null!;
+    public virtual usuario id_usuario_navigation { get; set; } = null!;
 
-    public virtual ICollection<perfile> perfileid_agenciaNavigations { get; set; } = new List<perfile>();
+    public virtual ICollection<perfile> perfile_id_agencia_navigations { get; set; } = new List<perfile>();
 
-    public virtual ICollection<perfile> perfilequien_verificoNavigations { get; set; } = new List<perfile>();
+    public virtual ICollection<perfile> perfile_quien_verifico_navigations { get; set; } = new List<perfile>();
+
 }

@@ -1,5 +1,6 @@
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\appsettings.json
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\AgencyPlatform.API.staticwebassets.runtime.json
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\AgencyPlatform.API.exe
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\AgencyPlatform.API.deps.json
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\AgencyPlatform.API.runtimeconfig.json
@@ -9,6 +10,8 @@ C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\n
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
@@ -70,6 +73,7 @@ C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\n
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\net8.0\AgencyPlatform.API.csproj.CoreCompileInputs.cache
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\net8.0\AgencyPlatform.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\net8.0\AgencyPlatform.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\net8.0\AgencyPlatform.API.sourcelink.json
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\net8.0\staticwebassets\msbuild.AgencyPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props

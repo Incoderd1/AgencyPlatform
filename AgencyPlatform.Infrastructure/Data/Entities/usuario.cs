@@ -67,8 +67,6 @@ public partial class usuario
 
     public DateTime? ultima_actividad { get; set; }
 
-    public virtual ICollection<acciones_antifrauide> acciones_antifrauides { get; set; } = new List<acciones_antifrauide>();
-
     public virtual ICollection<agencia> agencia { get; set; } = new List<agencia>();
 
     public virtual ICollection<cliente> clientes { get; set; } = new List<cliente>();
@@ -89,9 +87,9 @@ public partial class usuario
 
     public virtual ICollection<historial_verificacione> historial_verificaciones { get; set; } = new List<historial_verificacione>();
 
-    public virtual ICollection<imagenes_perfil> imagenes_perfilrevisada_porNavigations { get; set; } = new List<imagenes_perfil>();
+    public virtual ICollection<imagenes_perfil> imagenes_perfil_revisada_por_navigations { get; set; } = new List<imagenes_perfil>();
 
-    public virtual ICollection<imagenes_perfil> imagenes_perfilsubida_porNavigations { get; set; } = new List<imagenes_perfil>();
+    public virtual ICollection<imagenes_perfil> imagenes_perfil_subida_por_navigations { get; set; } = new List<imagenes_perfil>();
 
     public virtual ICollection<logs_sistema_actual> logs_sistema_actuals { get; set; } = new List<logs_sistema_actual>();
 
@@ -106,4 +104,6 @@ public partial class usuario
     public virtual ICollection<perfile> perfiles { get; set; } = new List<perfile>();
 
     public virtual ICollection<verificacione> verificaciones { get; set; } = new List<verificacione>();
+    public virtual ICollection<acciones_antifrauide> AccionesAntifrauides { get; set; } = new List<acciones_antifrauide>();
+
 }

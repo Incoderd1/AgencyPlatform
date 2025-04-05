@@ -112,7 +112,7 @@ public partial class AgencyPlatformDbContext : DbContext
             entity.Property(e => e.tipo_accion).HasMaxLength(25);
             entity.Property(e => e.tipo_entidad).HasMaxLength(10);
 
-            entity.HasOne(d => d.ejecutada_porNavigation).WithMany(p => p.acciones_antifrauides)
+            entity.HasOne(d => d.ejecutada_porNavigation).WithMany(p => p.AccionesAntifrauides)
                 .HasForeignKey(d => d.ejecutada_por)
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("acciones_antifrauide_ejecutada_por_fkey");
@@ -180,7 +180,7 @@ public partial class AgencyPlatformDbContext : DbContext
             entity.Property(e => e.telefono).HasMaxLength(20);
             entity.Property(e => e.verificada).HasDefaultValue(false);
 
-            entity.HasOne(d => d.id_usuarioNavigation).WithMany(p => p.agencia)
+            entity.HasOne(d => d.id_usuario_navigation).WithMany(p => p.agencia)
                 .HasForeignKey(d => d.id_usuario)
                 .HasConstraintName("agencias_id_usuario_fkey");
         });
@@ -244,7 +244,7 @@ public partial class AgencyPlatformDbContext : DbContext
             entity.Property(e => e.ubicacion_habitual).HasMaxLength(100);
             entity.Property(e => e.ultima_actividad).HasColumnType("timestamp without time zone");
 
-            entity.HasOne(d => d.id_usuarioNavigation).WithMany(p => p.clientes)
+            entity.HasOne(d => d.id_usuario_navigation).WithMany(p => p.clientes)
                 .HasForeignKey(d => d.id_usuario)
                 .HasConstraintName("clientes_id_usuario_fkey");
         });
@@ -657,12 +657,12 @@ public partial class AgencyPlatformDbContext : DbContext
                 .HasForeignKey(d => d.id_perfil)
                 .HasConstraintName("imagenes_perfil_id_perfil_fkey");
 
-            entity.HasOne(d => d.revisada_porNavigation).WithMany(p => p.imagenes_perfilrevisada_porNavigations)
+            entity.HasOne(d => d.revisada_porNavigation).WithMany(p => p.imagenes_perfil_revisada_por_navigations)
                 .HasForeignKey(d => d.revisada_por)
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("imagenes_perfil_revisada_por_fkey");
 
-            entity.HasOne(d => d.subida_porNavigation).WithMany(p => p.imagenes_perfilsubida_porNavigations)
+            entity.HasOne(d => d.subida_porNavigation).WithMany(p => p.imagenes_perfil_subida_por_navigations)
                 .HasForeignKey(d => d.subida_por)
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("imagenes_perfil_subida_por_fkey");
@@ -922,17 +922,17 @@ public partial class AgencyPlatformDbContext : DbContext
             entity.Property(e => e.verificado).HasDefaultValue(false);
             entity.Property(e => e.whatsapp).HasMaxLength(20);
 
-            entity.HasOne(d => d.id_agenciaNavigation).WithMany(p => p.perfileid_agenciaNavigations)
+            entity.HasOne(d => d.id_agencia_navigation).WithMany(p => p.perfile_id_agencia_navigations)
                 .HasForeignKey(d => d.id_agencia)
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("perfiles_id_agencia_fkey");
 
-            entity.HasOne(d => d.id_usuarioNavigation).WithMany(p => p.perfiles)
+            entity.HasOne(d => d.id_usuario_navigation).WithMany(p => p.perfiles)
                 .HasForeignKey(d => d.id_usuario)
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("perfiles_id_usuario_fkey");
 
-            entity.HasOne(d => d.quien_verificoNavigation).WithMany(p => p.perfilequien_verificoNavigations)
+            entity.HasOne(d => d.quien_verifico_navigation).WithMany(p => p.perfile_quien_verifico_navigations)
                 .HasForeignKey(d => d.quien_verifico)
                 .OnDelete(DeleteBehavior.SetNull)
                 .HasConstraintName("perfiles_quien_verifico_fkey");

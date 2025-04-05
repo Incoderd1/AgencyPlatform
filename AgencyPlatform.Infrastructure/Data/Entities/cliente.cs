@@ -55,7 +55,7 @@ public partial class cliente
 
     public virtual ICollection<feedback_interno> feedback_internos { get; set; } = new List<feedback_interno>();
 
-    public virtual usuario id_usuarioNavigation { get; set; } = null!;
+    public virtual usuario id_usuario_navigation { get; set; } = null!;
 
     public virtual ICollection<punto> puntos { get; set; } = new List<punto>();
 

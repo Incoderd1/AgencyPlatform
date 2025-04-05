@@ -5,6 +5,7 @@ C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Domain\obj\Debu
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Domain\obj\Debug\net8.0\AgencyPlatform.Domain.AssemblyInfoInputs.cache
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Domain\obj\Debug\net8.0\AgencyPlatform.Domain.AssemblyInfo.cs
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Domain\obj\Debug\net8.0\AgencyPlatform.Domain.csproj.CoreCompileInputs.cache
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Domain\obj\Debug\net8.0\AgencyPlatform.Domain.sourcelink.json
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Domain\obj\Debug\net8.0\AgencyPlatform.Domain.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Domain\obj\Debug\net8.0\refint\AgencyPlatform.Domain.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Domain\obj\Debug\net8.0\AgencyPlatform.Domain.pdb

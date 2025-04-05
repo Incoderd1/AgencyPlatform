@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\2025\\04\\04\\4iix4azm.ar0.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2025\\04\\04\\4iix4azm.ar0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\2025\\04\\04\\5h5hupfv.zml.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2025\\04\\04\\5h5hupfv.zml.jpg"
+    },
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\2025\\04\\04\\anwzwqh1.1mg.png",
+      "PackagePath": "staticwebassets\\uploads\\2025\\04\\04\\anwzwqh1.1mg.png"
+    },
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\2025\\04\\04\\hcdhx1yt.zkf.png",
+      "PackagePath": "staticwebassets\\uploads\\2025\\04\\04\\hcdhx1yt.zkf.png"
+    },
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\2025\\04\\04\\iudxzw5z.pep.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2025\\04\\04\\iudxzw5z.pep.jpg"
+    },
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\2025\\04\\04\\mbrlxf3q.kj1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2025\\04\\04\\mbrlxf3q.kj1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\2025\\04\\04\\ofcazxww.4hq.png",
+      "PackagePath": "staticwebassets\\uploads\\2025\\04\\04\\ofcazxww.4hq.png"
+    },
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\2025\\04\\04\\sclekiur.kvs.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2025\\04\\04\\sclekiur.kvs.jpg"
+    },
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\2025\\04\\04\\vhhgrnw0.btd.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2025\\04\\04\\vhhgrnw0.btd.jpg"
+    },
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\2025\\04\\04\\xnyqsdii.jwi.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2025\\04\\04\\xnyqsdii.jwi.jpg"
+    },
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\nkwhbgvs.d1x.jpg",
+      "PackagePath": "staticwebassets\\uploads\\nkwhbgvs.d1x.jpg"
+    },
+    {
+      "Id": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\vffa0nkn.kna.jpg",
+      "PackagePath": "staticwebassets\\uploads\\vffa0nkn.kna.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.AgencyPlatform.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.AgencyPlatform.API.props",
+      "PackagePath": "build\\AgencyPlatform.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.AgencyPlatform.API.props",
+      "PackagePath": "buildMultiTargeting\\AgencyPlatform.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.AgencyPlatform.API.props",
+      "PackagePath": "buildTransitive\\AgencyPlatform.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

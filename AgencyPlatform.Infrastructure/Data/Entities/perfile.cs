@@ -93,15 +93,15 @@ public partial class perfile
 
     public virtual ICollection<feedback_interno> feedback_internos { get; set; } = new List<feedback_interno>();
 
-    public virtual agencia? id_agenciaNavigation { get; set; }
+    public virtual agencia? id_agencia_navigation { get; set; }
 
-    public virtual usuario? id_usuarioNavigation { get; set; }
+    public virtual usuario? id_usuario_navigation { get; set; }
 
     public virtual ICollection<imagenes_perfil> imagenes_perfils { get; set; } = new List<imagenes_perfil>();
 
     public virtual ICollection<metricas_perfil> metricas_perfils { get; set; } = new List<metricas_perfil>();
 
-    public virtual agencia? quien_verificoNavigation { get; set; }
+    public virtual agencia? quien_verifico_navigation { get; set; }
 
     public virtual ICollection<resumen_historico_visita> resumen_historico_visita { get; set; } = new List<resumen_historico_visita>();
 

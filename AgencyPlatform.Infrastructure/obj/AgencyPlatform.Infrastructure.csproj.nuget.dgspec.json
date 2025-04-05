@@ -63,7 +63,11 @@
             },
             "FluentValidation": {
               "target": "Package",
-              "version": "[11.7.2, )"
+              "version": "[11.11.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.3.0, )"
             }
           },
           "imports": [

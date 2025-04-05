@@ -10,6 +10,7 @@ C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Application\obj
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Application\obj\Debug\net8.0\AgencyPlatform.Application.AssemblyInfoInputs.cache
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Application\obj\Debug\net8.0\AgencyPlatform.Application.AssemblyInfo.cs
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Application\obj\Debug\net8.0\AgencyPlatform.Application.csproj.CoreCompileInputs.cache
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Application\obj\Debug\net8.0\AgencyPlatform.Application.sourcelink.json
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Application\obj\Debug\net8.0\AgencyPl.FDAF011E.Up2Date
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Application\obj\Debug\net8.0\AgencyPlatform.Application.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Application\obj\Debug\net8.0\refint\AgencyPlatform.Application.dll

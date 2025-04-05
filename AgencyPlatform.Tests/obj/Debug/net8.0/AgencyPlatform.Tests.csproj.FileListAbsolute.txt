@@ -12,6 +12,8 @@ C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\bin\Debug
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
@@ -105,6 +107,7 @@ C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\obj\Debug
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\obj\Debug\net8.0\AgencyPlatform.Tests.AssemblyInfoInputs.cache
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\obj\Debug\net8.0\AgencyPlatform.Tests.AssemblyInfo.cs
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\obj\Debug\net8.0\AgencyPlatform.Tests.csproj.CoreCompileInputs.cache
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\obj\Debug\net8.0\AgencyPlatform.Tests.sourcelink.json
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\obj\Debug\net8.0\AgencyPl.4759CEA0.Up2Date
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\obj\Debug\net8.0\AgencyPlatform.Tests.dll
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.Tests\obj\Debug\net8.0\refint\AgencyPlatform.Tests.dll
