@@ -3,58 +3,57 @@ using System.Collections.Generic;
 
 namespace AgencyPlatform.Infrastructure.Data.Entities;
 
-public partial class agencia
+public partial class Agencia
 {
-    public int id_agencia { get; set; }
+    public int IdAgencia { get; set; }
 
-    public int id_usuario { get; set; }
+    public int IdUsuario { get; set; }
 
-    public string nombre_comercial { get; set; } = null!;
+    public string NombreComercial { get; set; } = null!;
 
-    public string? razon_social { get; set; }
+    public string? RazonSocial { get; set; }
 
-    public string? nif_cif { get; set; }
+    public string? NifCif { get; set; }
 
-    public string? direccion { get; set; }
+    public string? Direccion { get; set; }
 
-    public string? ciudad { get; set; }
+    public string? Ciudad { get; set; }
 
-    public string? region { get; set; }
+    public string? Region { get; set; }
 
-    public string? pais { get; set; }
+    public string? Pais { get; set; }
 
-    public string? codigo_postal { get; set; }
+    public string? CodigoPostal { get; set; }
 
-    public string telefono { get; set; } = null!;
+    public string Telefono { get; set; } = null!;
 
-    public string email_contacto { get; set; } = null!;
+    public string EmailContacto { get; set; } = null!;
 
-    public string? sitio_web { get; set; }
+    public string? SitioWeb { get; set; }
 
-    public string? descripcion { get; set; }
+    public string? Descripcion { get; set; }
 
-    public string? horario { get; set; }
+    public string? Horario { get; set; }
 
-    public string? logo_url { get; set; }
+    public string? LogoUrl { get; set; }
 
-    public bool verificada { get; set; }
+    public bool Verificada { get; set; }
 
-    public DateTime? fecha_verificacion { get; set; }
+    public DateTime? FechaVerificacion { get; set; }
 
-    public string? documento_verificacion { get; set; }
+    public string? DocumentoVerificacion { get; set; }
 
-    public int num_perfiles_activos { get; set; }
+    public int NumPerfilesActivos { get; set; }
 
-    public DateTime fecha_registro { get; set; }
+    public DateTime FechaRegistro { get; set; }
 
-    public DateTime fecha_actualizacion { get; set; }
+    public DateTime FechaActualizacion { get; set; }
 
-    public string estado { get; set; } = null!;
+    public string Estado { get; set; } = null!;
 
-    public virtual usuario id_usuario_navigation { get; set; } = null!;
+    public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
 
-    public virtual ICollection<perfile> perfile_id_agencia_navigations { get; set; } = new List<perfile>();
+    public virtual ICollection<Perfile> PerfileIdAgenciaNavigations { get; set; } = new List<Perfile>();
 
-    public virtual ICollection<perfile> perfile_quien_verifico_navigations { get; set; } = new List<perfile>();
-
+    public virtual ICollection<Perfile> PerfileQuienVerificoNavigations { get; set; } = new List<Perfile>();
 }

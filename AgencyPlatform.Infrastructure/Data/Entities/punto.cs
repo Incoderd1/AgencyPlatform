@@ -3,29 +3,29 @@ using System.Collections.Generic;
 
 namespace AgencyPlatform.Infrastructure.Data.Entities;
 
-public partial class punto
+public partial class Punto
 {
-    public int id_punto { get; set; }
+    public int IdPunto { get; set; }
 
-    public int id_cliente { get; set; }
+    public long IdCliente { get; set; }
 
-    public int cantidad { get; set; }
+    public int Cantidad { get; set; }
 
-    public string tipo_accion { get; set; } = null!;
+    public string TipoAccion { get; set; } = null!;
 
-    public string? descripcion { get; set; }
+    public string? Descripcion { get; set; }
 
-    public DateTime fecha_obtencion { get; set; }
+    public DateTime FechaObtencion { get; set; }
 
-    public DateTime? fecha_expiracion { get; set; }
+    public DateTime? FechaExpiracion { get; set; }
 
-    public string estado { get; set; } = null!;
+    public string Estado { get; set; } = null!;
 
-    public long? id_referencia { get; set; }
+    public long? IdReferencia { get; set; }
 
-    public string? tipo_referencia { get; set; }
+    public string? TipoReferencia { get; set; }
 
-    public decimal multiplicador { get; set; }
+    public decimal Multiplicador { get; set; }
 
-    public virtual cliente id_clienteNavigation { get; set; } = null!;
+    public virtual Cliente IdClienteNavigation { get; set; } = null!;
 }

@@ -55,11 +55,11 @@ public partial class imagenes_perfil
 
     public DateTime? fecha_revision { get; set; }
 
-    public virtual perfile id_perfilNavigation { get; set; } = null!;
+    public virtual Perfile id_perfilNavigation { get; set; } = null!;
 
-    public virtual ICollection<procesamiento_imagene> procesamiento_imagenes { get; set; } = new List<procesamiento_imagene>();
+    public virtual ICollection<ProcesamientoImagene> procesamiento_imagenes { get; set; } = new List<ProcesamientoImagene>();
 
-    public virtual usuario? revisada_porNavigation { get; set; }
+    public virtual Usuario? revisada_porNavigation { get; set; }
 
-    public virtual usuario? subida_porNavigation { get; set; }
+    public virtual Usuario? subida_porNavigation { get; set; }
 }

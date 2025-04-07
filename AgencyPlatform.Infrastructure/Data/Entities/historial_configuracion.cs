@@ -21,7 +21,7 @@ public partial class historial_configuracion
 
     public string? ip_origen { get; set; }
 
-    public virtual configuracion_sistema id_configNavigation { get; set; } = null!;
+    public virtual ConfiguracionSistema id_configNavigation { get; set; } = null!;
 
-    public virtual usuario? realizado_porNavigation { get; set; }
+    public virtual Usuario? realizado_porNavigation { get; set; }
 }

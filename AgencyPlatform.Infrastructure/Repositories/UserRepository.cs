@@ -14,35 +14,35 @@ namespace AgencyPlatform.Infrastructure.Repositories
             _context = context;
         }
 
-        public IQueryable<usuario> Query()
+        public IQueryable<Usuario> Query()
         {
-            return _context.usuarios.AsQueryable();
+            return _context.Usuarios.AsQueryable();
         }
 
-        public async Task<usuario> GetByIdAsync(int id)
+        public async Task<Usuario> GetByIdAsync(int id)
         {
-            return await _context.usuarios.FindAsync(id);
+            return await _context.Usuarios.FindAsync(id);
         }
 
-        public async Task<usuario> GetByEmailAsync(string email)
+        public async Task<Usuario> GetByEmailAsync(string email)
         {
-            return await _context.usuarios
-                .FirstOrDefaultAsync(u => u.email == email);
+            return await _context.Usuarios
+                .FirstOrDefaultAsync(u => u.Email == email);
         }
 
-        public async Task AddAsync(usuario entity)
+        public async Task AddAsync(Usuario entity)
         {
-            await _context.usuarios.AddAsync(entity);
+            await _context.Usuarios.AddAsync(entity);
         }
 
-        public void Update(usuario entity)
+        public void Update(Usuario entity)
         {
-            _context.usuarios.Update(entity);
+            _context.Usuarios.Update(entity);
         }
 
-        public void Delete(usuario entity)
+        public void Delete(Usuario entity)
         {
-            _context.usuarios.Remove(entity);
+            _context.Usuarios.Remove(entity);
         }
 
         public async Task SaveChangesAsync()
@@ -50,9 +50,9 @@ namespace AgencyPlatform.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task<bool> AnyAsync(Expression<Func<usuario, bool>> predicate)
+        public async Task<bool> AnyAsync(Expression<Func<Usuario, bool>> predicate)
         {
-            return await _context.usuarios.AnyAsync(predicate);
+            return await _context.Usuarios.AnyAsync(predicate);
         }
     }
 }

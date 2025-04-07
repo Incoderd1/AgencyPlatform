@@ -9,12 +9,12 @@ namespace AgencyPlatform.Infrastructure.Repositories
 {
     public interface IPerfilRepository
     {
-        Task<perfile?> GetByIdAsync(int id);
-        Task AddAsync(perfile perfil);
+        Task<Perfile?> GetByIdAsync(int id);
+        Task AddAsync(Perfile perfil);
         Task SaveChangesAsync();
-        IQueryable<perfile> Query();
-        Task<List<perfile>> GetPaginatedAsync(int page, int pageSize);
-        void Remove(perfile perfil);  // Agrega este método
+        IQueryable<Perfile> Query();
+        Task<List<Perfile>> GetPaginatedAsync(int page, int pageSize);
+        void Remove(Perfile perfil);  // Agrega este método
 
     }
 }

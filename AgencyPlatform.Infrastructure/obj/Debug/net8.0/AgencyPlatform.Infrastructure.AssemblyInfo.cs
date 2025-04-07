@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AgencyPlatform.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44652db432cb53e8cee66ac963b687c32d6004e3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0e06c53c99b48c47cb6f8f81b5282dab670da3a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("AgencyPlatform.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AgencyPlatform.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

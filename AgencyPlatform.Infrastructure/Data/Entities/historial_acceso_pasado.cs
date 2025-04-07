@@ -25,5 +25,5 @@ public partial class historial_acceso_pasado
 
     public string? detalles { get; set; }
 
-    public virtual usuario id_usuarioNavigation { get; set; } = null!;
+    public virtual Usuario id_usuarioNavigation { get; set; } = null!;
 }

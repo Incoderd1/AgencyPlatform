@@ -1,5 +1,6 @@
 ﻿using AgencyPlatform.Application.DTOs.Agencia;
 using AgencyPlatform.Application.Interfaces.Services;
+using AgencyPlatform.Infrastructure.Data;
 using AgencyPlatform.Infrastructure.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
@@ -25,96 +26,96 @@ public class AgenciaService : IAgenciaService
 
     public async Task<IEnumerable<AgenciaDto>> GetAllAsync()
     {
-        var agencias = await _context.agencias.ToListAsync();
+        var agencias = await _context.Agencias.ToListAsync();
 
         return agencias.Select(a => new AgenciaDto
         {
-            Id = a.id_agencia,
-            IdUsuario = a.id_usuario,
-            NombreComercial = a.nombre_comercial,
-            RazonSocial = a.razon_social,
-            NifCif = a.nif_cif,
-            Direccion = a.direccion,
-            Ciudad = a.ciudad,
-            Region = a.region,
-            Pais = a.pais,
-            CodigoPostal = a.codigo_postal,
-            Telefono = a.telefono,
-            EmailContacto = a.email_contacto,
-            SitioWeb = a.sitio_web,
-            Descripcion = a.descripcion,
-            Horario = string.IsNullOrWhiteSpace(a.horario) ? null : JsonSerializer.Deserialize<HorarioDto>(a.horario),
-            LogoUrl = a.logo_url,
-            Verificada = a.verificada,
-            FechaVerificacion = a.fecha_verificacion,
-            NumPerfilesActivos = a.num_perfiles_activos,
-            FechaRegistro = a.fecha_registro,
-            FechaActualizacion = a.fecha_actualizacion,
-            Estado = a.estado
+            Id = a.IdAgencia,
+            IdUsuario = a.IdUsuario,
+            NombreComercial = a.NombreComercial,
+            RazonSocial = a.RazonSocial,
+            NifCif = a.NifCif,
+            Direccion = a.Direccion,
+            Ciudad = a.Ciudad,
+            Region = a.Region,
+            Pais = a.Pais,
+            CodigoPostal = a.CodigoPostal,
+            Telefono = a.Telefono,
+            EmailContacto = a.EmailContacto,
+            SitioWeb = a.SitioWeb,
+            Descripcion = a.Descripcion,
+            Horario = string.IsNullOrWhiteSpace(a.Horario) ? null : JsonSerializer.Deserialize<HorarioDto>(a.Horario),
+            LogoUrl = a.LogoUrl,
+            Verificada = a.Verificada,
+            FechaVerificacion = a.FechaVerificacion,
+            NumPerfilesActivos = a.NumPerfilesActivos,
+            FechaRegistro = a.FechaRegistro,
+            FechaActualizacion = a.FechaActualizacion,
+            Estado = a.Estado
         }).ToList();
     }
 
     public async Task<AgenciaDto?> GetByIdAsync(int id)
     {
-        var agencia = await _context.agencias.FindAsync(id);
+        var agencia = await _context.Agencias.FindAsync(id);
         if (agencia == null) return null;
 
         return new AgenciaDto
         {
-            Id = agencia.id_agencia,
-            IdUsuario = agencia.id_usuario,
-            NombreComercial = agencia.nombre_comercial,
-            RazonSocial = agencia.razon_social,
-            NifCif = agencia.nif_cif,
-            Direccion = agencia.direccion,
-            Ciudad = agencia.ciudad,
-            Region = agencia.region,
-            Pais = agencia.pais,
-            CodigoPostal = agencia.codigo_postal,
-            Telefono = agencia.telefono,
-            EmailContacto = agencia.email_contacto,
-            SitioWeb = agencia.sitio_web,
-            Descripcion = agencia.descripcion,
-            Horario = string.IsNullOrWhiteSpace(agencia.horario) ? null : JsonSerializer.Deserialize<HorarioDto>(agencia.horario),
-            LogoUrl = agencia.logo_url,
-            Verificada = agencia.verificada,
-            FechaVerificacion = agencia.fecha_verificacion,
-            NumPerfilesActivos = agencia.num_perfiles_activos,
-            FechaRegistro = agencia.fecha_registro,
-            FechaActualizacion = agencia.fecha_actualizacion,
-            Estado = agencia.estado
+            Id = agencia.IdAgencia,
+            IdUsuario = agencia.IdUsuario,
+            NombreComercial = agencia.NombreComercial,
+            RazonSocial = agencia.RazonSocial,
+            NifCif = agencia.NifCif,
+            Direccion = agencia.Direccion,
+            Ciudad = agencia.Ciudad,
+            Region = agencia.Region,
+            Pais = agencia.Pais,
+            CodigoPostal = agencia.CodigoPostal,
+            Telefono = agencia.Telefono,
+            EmailContacto = agencia.EmailContacto,
+            SitioWeb = agencia.SitioWeb,
+            Descripcion = agencia.Descripcion,
+            Horario = string.IsNullOrWhiteSpace(agencia.Horario) ? null : JsonSerializer.Deserialize<HorarioDto>(agencia.Horario),
+            LogoUrl = agencia.LogoUrl,
+            Verificada = agencia.Verificada,
+            FechaVerificacion = agencia.FechaVerificacion,
+            NumPerfilesActivos = agencia.NumPerfilesActivos,
+            FechaRegistro = agencia.FechaRegistro,
+            FechaActualizacion = agencia.FechaActualizacion,
+            Estado = agencia.Estado
         };
     }
 
     public async Task<AgenciaDto?> GetByUserIdAsync(int userId)
     {
-        var agencia = await _context.agencias.FirstOrDefaultAsync(a => a.id_usuario == userId);
+        var agencia = await _context.Agencias.FirstOrDefaultAsync(a => a.IdUsuario == userId);
         if (agencia == null) return null;
 
         return new AgenciaDto
         {
-            Id = agencia.id_agencia,
-            IdUsuario = agencia.id_usuario,
-            NombreComercial = agencia.nombre_comercial,
-            RazonSocial = agencia.razon_social,
-            NifCif = agencia.nif_cif,
-            Direccion = agencia.direccion,
-            Ciudad = agencia.ciudad,
-            Region = agencia.region,
-            Pais = agencia.pais,
-            CodigoPostal = agencia.codigo_postal,
-            Telefono = agencia.telefono,
-            EmailContacto = agencia.email_contacto,
-            SitioWeb = agencia.sitio_web,
-            Descripcion = agencia.descripcion,
-            Horario = string.IsNullOrWhiteSpace(agencia.horario) ? null : JsonSerializer.Deserialize<HorarioDto>(agencia.horario),
-            LogoUrl = agencia.logo_url,
-            Verificada = agencia.verificada,
-            FechaVerificacion = agencia.fecha_verificacion,
-            NumPerfilesActivos = agencia.num_perfiles_activos,
-            FechaRegistro = agencia.fecha_registro,
-            FechaActualizacion = agencia.fecha_actualizacion,
-            Estado = agencia.estado
+            Id = agencia.IdAgencia,
+            IdUsuario = agencia.IdUsuario,
+            NombreComercial = agencia.NombreComercial,
+            RazonSocial = agencia.RazonSocial,
+            NifCif = agencia.NifCif,
+            Direccion = agencia.Direccion,
+            Ciudad = agencia.Ciudad,
+            Region = agencia.Region,
+            Pais = agencia.Pais,
+            CodigoPostal = agencia.CodigoPostal,
+            Telefono = agencia.Telefono,
+            EmailContacto = agencia.EmailContacto,
+            SitioWeb = agencia.SitioWeb,
+            Descripcion = agencia.Descripcion,
+            Horario = string.IsNullOrWhiteSpace(agencia.Horario) ? null : JsonSerializer.Deserialize<HorarioDto>(agencia.Horario),
+            LogoUrl = agencia.LogoUrl,
+            Verificada = agencia.Verificada,
+            FechaVerificacion = agencia.FechaVerificacion,
+            NumPerfilesActivos = agencia.NumPerfilesActivos,
+            FechaRegistro = agencia.FechaRegistro,
+            FechaActualizacion = agencia.FechaActualizacion,
+            Estado = agencia.Estado
         };
     }
 
@@ -124,32 +125,32 @@ public class AgenciaService : IAgenciaService
         {
             var userId = GetCurrentUserId();
 
-            var agencia = new agencia
+            var agencia = new Agencia
             {
-                id_usuario = userId,
-                nombre_comercial = dto.NombreComercial,
-                razon_social = dto.RazonSocial,
-                nif_cif = dto.NifCif,
-                direccion = dto.Direccion,
-                ciudad = dto.Ciudad,
-                region = dto.Region,
-                pais = dto.Pais,
-                codigo_postal = dto.CodigoPostal,
-                telefono = dto.Telefono,
-                email_contacto = dto.EmailContacto,
-                sitio_web = dto.SitioWeb,
-                descripcion = dto.Descripcion,
-                horario = dto.Horario is not null ? JsonSerializer.Serialize(dto.Horario) : null,
-                logo_url = dto.LogoUrl,
-                fecha_registro = DateTime.UtcNow.ToLocalTime(),
-                fecha_actualizacion = DateTime.UtcNow.ToLocalTime(),
-                estado = "pendiente_verificacion"
+                IdUsuario = userId,
+                NombreComercial = dto.NombreComercial,
+                RazonSocial = dto.RazonSocial,
+                NifCif = dto.NifCif,
+                Direccion = dto.Direccion,
+                Ciudad = dto.Ciudad,
+                Region = dto.Region,
+                Pais = dto.Pais,
+                CodigoPostal = dto.CodigoPostal,
+                Telefono = dto.Telefono,
+                EmailContacto = dto.EmailContacto,
+                SitioWeb = dto.SitioWeb,
+                Descripcion = dto.Descripcion,
+                Horario = dto.Horario is not null ? JsonSerializer.Serialize(dto.Horario) : null,
+                LogoUrl = dto.LogoUrl,
+                FechaRegistro = DateTime.UtcNow.ToLocalTime(),
+                FechaActualizacion = DateTime.UtcNow.ToLocalTime(),
+                Estado = "pendiente_verificacion"
             };
 
-            _context.agencias.Add(agencia);
+            _context.Agencias.Add(agencia);
             await _context.SaveChangesAsync();
 
-            return await GetByIdAsync(agencia.id_agencia);
+            return await GetByIdAsync(agencia.IdAgencia);
         }
         catch (Exception ex)
         {
@@ -160,35 +161,35 @@ public class AgenciaService : IAgenciaService
 
     public async Task<AgenciaDto?> UpdateAsync(int id, UpdateAgenciaDto dto)
     {
-        var agencia = await _context.agencias.FindAsync(id);
+        var agencia = await _context.Agencias.FindAsync(id);
         if (agencia == null) return null;
 
-        agencia.nombre_comercial = dto.NombreComercial ?? agencia.nombre_comercial;
-        agencia.razon_social = dto.RazonSocial ?? agencia.razon_social;
-        agencia.nif_cif = dto.NifCif ?? agencia.nif_cif;
-        agencia.direccion = dto.Direccion ?? agencia.direccion;
-        agencia.ciudad = dto.Ciudad ?? agencia.ciudad;
-        agencia.region = dto.Region ?? agencia.region;
-        agencia.pais = dto.Pais ?? agencia.pais;
-        agencia.codigo_postal = dto.CodigoPostal ?? agencia.codigo_postal;
-        agencia.telefono = dto.Telefono ?? agencia.telefono;
-        agencia.email_contacto = dto.EmailContacto ?? agencia.email_contacto;
-        agencia.sitio_web = dto.SitioWeb ?? agencia.sitio_web;
-        agencia.descripcion = dto.Descripcion ?? agencia.descripcion;
-        agencia.horario = dto.Horario is not null ? JsonSerializer.Serialize(dto.Horario) : agencia.horario;
-        agencia.logo_url = dto.LogoUrl ?? agencia.logo_url;
-        agencia.fecha_actualizacion = DateTime.UtcNow;
+        agencia.NombreComercial = dto.NombreComercial ?? agencia.NombreComercial;
+        agencia.RazonSocial = dto.RazonSocial ?? agencia.RazonSocial;
+        agencia.NifCif = dto.NifCif ?? agencia.NifCif;
+        agencia.Direccion = dto.Direccion ?? agencia.Direccion;
+        agencia.Ciudad = dto.Ciudad ?? agencia.Ciudad;
+        agencia.Region = dto.Region ?? agencia.Region;
+        agencia.Pais = dto.Pais ?? agencia.Pais;
+        agencia.CodigoPostal = dto.CodigoPostal ?? agencia.CodigoPostal;
+        agencia.Telefono = dto.Telefono ?? agencia.Telefono;
+        agencia.EmailContacto = dto.EmailContacto ?? agencia.EmailContacto;
+        agencia.SitioWeb = dto.SitioWeb ?? agencia.SitioWeb;
+        agencia.Descripcion = dto.Descripcion ?? agencia.Descripcion;
+        agencia.Horario = dto.Horario is not null ? JsonSerializer.Serialize(dto.Horario) : agencia.Horario;
+        agencia.LogoUrl = dto.LogoUrl ?? agencia.LogoUrl;
+        agencia.FechaActualizacion = DateTime.UtcNow;
 
         await _context.SaveChangesAsync();
-        return await GetByIdAsync(agencia.id_agencia);
+        return await GetByIdAsync(agencia.IdAgencia);
     }
 
     public async Task<bool> DeleteAsync(int id)
     {
-        var agencia = await _context.agencias.FindAsync(id);
+        var agencia = await _context.Agencias.FindAsync(id);
         if (agencia == null) return false;
 
-        _context.agencias.Remove(agencia);
+        _context.Agencias.Remove(agencia);
         await _context.SaveChangesAsync();
 
         return true;

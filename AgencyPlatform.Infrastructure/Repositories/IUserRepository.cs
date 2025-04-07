@@ -10,14 +10,14 @@ namespace AgencyPlatform.Infrastructure.Repositories
 {
     public interface IUserRepository
     {
-        IQueryable<usuario> Query();
-        Task<usuario> GetByIdAsync(int id);
-        Task<usuario> GetByEmailAsync(string email);
-        Task AddAsync(usuario entity);
-        void Update(usuario entity);
-        void Delete(usuario entity);
+        IQueryable<Usuario> Query();
+        Task<Usuario> GetByIdAsync(int id);
+        Task<Usuario> GetByEmailAsync(string email);
+        Task AddAsync(Usuario entity);
+        void Update(Usuario entity);
+        void Delete(Usuario entity);
         Task SaveChangesAsync();
-        Task<bool> AnyAsync(Expression<Func<usuario, bool>> predicate);
+        Task<bool> AnyAsync(Expression<Func<Usuario, bool>> predicate);
 
 
     }

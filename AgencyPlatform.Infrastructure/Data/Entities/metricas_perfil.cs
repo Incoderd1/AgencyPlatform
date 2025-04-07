@@ -21,5 +21,5 @@ public partial class metricas_perfil
 
     public string tendencia { get; set; } = null!;
 
-    public virtual perfile id_perfilNavigation { get; set; } = null!;
+    public virtual Perfile id_perfilNavigation { get; set; } = null!;
 }

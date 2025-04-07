@@ -1,4 +1,5 @@
 ﻿using AgencyPlatform.Application.Interfaces.Repositories;
+using AgencyPlatform.Infrastructure.Data;
 using AgencyPlatform.Infrastructure.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 namespace AgencyPlatform.Infrastructure.Repositories
@@ -12,45 +13,45 @@ namespace AgencyPlatform.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<IEnumerable<agencia>> GetAllAsync()
+        public async Task<IEnumerable<Agencia>> GetAllAsync()
         {
-            return await _context.agencias.AsNoTracking().ToListAsync();
+            return await _context.Agencias.AsNoTracking().ToListAsync();
         }
 
-        public async Task<agencia?> GetByIdAsync(int id)
+        public async Task<Agencia?> GetByIdAsync(int id)
         {
-            return await _context.agencias
+            return await _context.Agencias
                 .AsNoTracking()
-                .FirstOrDefaultAsync(a => a.id_agencia == id);
+                .FirstOrDefaultAsync(a => a.IdUsuario == id);
         }
 
-        public async Task<agencia?> GetByUserIdAsync(int userId)
+        public async Task<Agencia?> GetByUserIdAsync(int userId)
         {
-            return await _context.agencias
+            return await _context.Agencias
                 .AsNoTracking()
-                .FirstOrDefaultAsync(a => a.id_usuario == userId);
+                .FirstOrDefaultAsync(a => a.IdUsuario == userId);
         }
 
-        public async Task<agencia> AddAsync(agencia agencia)
+        public async Task<Agencia> AddAsync(Agencia agencia)
         {
-            await _context.agencias.AddAsync(agencia);
+            await _context.Agencias.AddAsync(agencia);
             await _context.SaveChangesAsync();
             return agencia;
         }
 
-        public async Task<agencia?> UpdateAsync(agencia agencia)
+        public async Task<Agencia?> UpdateAsync(Agencia agencia)
         {
-            _context.agencias.Update(agencia);
+            _context.Agencias.Update(agencia);
             await _context.SaveChangesAsync();
             return agencia;
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var agencia = await _context.agencias.FindAsync(id);
+            var agencia = await _context.Agencias.FindAsync(id);
             if (agencia == null) return false;
 
-            _context.agencias.Remove(agencia);
+            _context.Agencias.Remove(agencia);
             await _context.SaveChangesAsync();
             return true;
         }

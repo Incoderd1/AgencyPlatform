@@ -3,111 +3,111 @@ using System.Collections.Generic;
 
 namespace AgencyPlatform.Infrastructure.Data.Entities;
 
-public partial class perfile
+public partial class Perfile
 {
-    public int id_perfil { get; set; }
+    public int IdPerfil { get; set; }
 
-    public int? id_usuario { get; set; }
+    public int? IdUsuario { get; set; }
 
-    public int? id_agencia { get; set; }
+    public int? IdAgencia { get; set; }
 
-    public string nombre_perfil { get; set; } = null!;
+    public string NombrePerfil { get; set; } = null!;
 
-    public string genero { get; set; } = null!;
+    public string Genero { get; set; } = null!;
 
-    public short edad { get; set; }
+    public short Edad { get; set; }
 
-    public short? altura { get; set; }
+    public short? Altura { get; set; }
 
-    public short? peso { get; set; }
+    public short? Peso { get; set; }
 
-    public string? medidas { get; set; }
+    public string? Medidas { get; set; }
 
-    public string? color_ojos { get; set; }
+    public string? ColorOjos { get; set; }
 
-    public string? color_cabello { get; set; }
+    public string? ColorCabello { get; set; }
 
-    public string? nacionalidad { get; set; }
+    public string? Nacionalidad { get; set; }
 
-    public string? idiomas { get; set; }
+    public string? Idiomas { get; set; }
 
-    public string? descripcion { get; set; }
+    public string? Descripcion { get; set; }
 
-    public string? servicios { get; set; }
+    public string? Servicios { get; set; }
 
-    public string? tarifas { get; set; }
+    public string? Tarifas { get; set; }
 
-    public string? ubicacion_ciudad { get; set; }
+    public string? UbicacionCiudad { get; set; }
 
-    public string? ubicacion_zona { get; set; }
+    public string? UbicacionZona { get; set; }
 
-    public string? disponibilidad { get; set; }
+    public string? Disponibilidad { get; set; }
 
-    public string disponible_para { get; set; } = null!;
+    public string DisponiblePara { get; set; } = null!;
 
-    public bool disponible_24h { get; set; }
+    public bool Disponible24h { get; set; }
 
-    public bool dispone_local { get; set; }
+    public bool DisponeLocal { get; set; }
 
-    public bool hace_salidas { get; set; }
+    public bool HaceSalidas { get; set; }
 
-    public bool verificado { get; set; }
+    public bool Verificado { get; set; }
 
-    public DateTime? fecha_verificacion { get; set; }
+    public DateTime? FechaVerificacion { get; set; }
 
-    public int? quien_verifico { get; set; }
+    public int? QuienVerifico { get; set; }
 
-    public bool es_independiente { get; set; }
+    public bool EsIndependiente { get; set; }
 
-    public string? telefono_contacto { get; set; }
+    public string? TelefonoContacto { get; set; }
 
-    public string? whatsapp { get; set; }
+    public string? Whatsapp { get; set; }
 
-    public string? email_contacto { get; set; }
+    public string? EmailContacto { get; set; }
 
-    public DateTime fecha_registro { get; set; }
+    public DateTime FechaRegistro { get; set; }
 
-    public DateTime fecha_actualizacion { get; set; }
+    public DateTime FechaActualizacion { get; set; }
 
-    public string estado { get; set; } = null!;
+    public string Estado { get; set; } = null!;
 
-    public bool destacado { get; set; }
+    public bool Destacado { get; set; }
 
-    public DateOnly? fecha_inicio_destacado { get; set; }
+    public DateOnly? FechaInicioDestacado { get; set; }
 
-    public DateOnly? fecha_fin_destacado { get; set; }
+    public DateOnly? FechaFinDestacado { get; set; }
 
-    public DateTime? ultimo_online { get; set; }
+    public DateTime? UltimoOnline { get; set; }
 
-    public long num_visitas { get; set; }
+    public long NumVisitas { get; set; }
 
-    public long num_contactos { get; set; }
+    public long NumContactos { get; set; }
 
-    public decimal? puntuacion_interna { get; set; }
+    public decimal? PuntuacionInterna { get; set; }
 
-    public string nivel_popularidad { get; set; } = null!;
+    public string NivelPopularidad { get; set; } = null!;
 
-    public virtual ICollection<actividad_perfile> actividad_perfiles { get; set; } = new List<actividad_perfile>();
+    public virtual ICollection<ActividadPerfile> ActividadPerfiles { get; set; } = new List<ActividadPerfile>();
 
-    public virtual ICollection<contactos_perfil> contactos_perfils { get; set; } = new List<contactos_perfil>();
+    public virtual ICollection<ContactosPerfil> ContactosPerfils { get; set; } = new List<ContactosPerfil>();
 
-    public virtual ICollection<feedback_interno> feedback_internos { get; set; } = new List<feedback_interno>();
+    public virtual ICollection<FeedbackInterno> FeedbackInternos { get; set; } = new List<FeedbackInterno>();
 
-    public virtual agencia? id_agencia_navigation { get; set; }
+    public virtual Agencia? IdAgenciaNavigation { get; set; }
 
-    public virtual usuario? id_usuario_navigation { get; set; }
+    public virtual Usuario? IdUsuarioNavigation { get; set; }
 
-    public virtual ICollection<imagenes_perfil> imagenes_perfils { get; set; } = new List<imagenes_perfil>();
+    public virtual ICollection<ImagenesPerfil> ImagenesPerfils { get; set; } = new List<ImagenesPerfil>();
 
-    public virtual ICollection<metricas_perfil> metricas_perfils { get; set; } = new List<metricas_perfil>();
+    public virtual ICollection<MetricasPerfil> MetricasPerfils { get; set; } = new List<MetricasPerfil>();
 
-    public virtual agencia? quien_verifico_navigation { get; set; }
+    public virtual Agencia? QuienVerificoNavigation { get; set; }
 
-    public virtual ICollection<resumen_historico_visita> resumen_historico_visita { get; set; } = new List<resumen_historico_visita>();
+    public virtual ICollection<ResumenHistoricoVisita> ResumenHistoricoVisita { get; set; } = new List<ResumenHistoricoVisita>();
 
-    public virtual ICollection<visitas_perfil_actual> visitas_perfil_actuals { get; set; } = new List<visitas_perfil_actual>();
+    public virtual ICollection<VisitasPerfilActual> VisitasPerfilActuals { get; set; } = new List<VisitasPerfilActual>();
 
-    public virtual ICollection<visitas_perfil_antiguo> visitas_perfil_antiguos { get; set; } = new List<visitas_perfil_antiguo>();
+    public virtual ICollection<VisitasPerfilAntiguo> VisitasPerfilAntiguos { get; set; } = new List<VisitasPerfilAntiguo>();
 
-    public virtual ICollection<visitas_perfil> visitas_perfils { get; set; } = new List<visitas_perfil>();
+    public virtual ICollection<VisitasPerfil> VisitasPerfils { get; set; } = new List<VisitasPerfil>();
 }

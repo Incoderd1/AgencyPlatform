@@ -35,5 +35,5 @@ public partial class logs_sistema_reciente
 
     public string? hash_identificador { get; set; }
 
-    public virtual usuario? id_usuarioNavigation { get; set; }
+    public virtual  Usuario? id_usuarioNavigation { get; set; }
 }

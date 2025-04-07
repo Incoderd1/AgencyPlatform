@@ -3,67 +3,69 @@ using System.Collections.Generic;
 
 namespace AgencyPlatform.Infrastructure.Data.Entities;
 
-public partial class cliente
+public partial class Cliente
 {
-    public int id_cliente { get; set; }
+    public long IdCliente { get; set; }
 
-    public int id_usuario { get; set; }
+    public int IdUsuario { get; set; }
 
-    public string? nombre { get; set; }
+    public string? Nombre { get; set; }
 
-    public string? telefono { get; set; }
+    public string? Telefono { get; set; }
 
-    public bool es_vip { get; set; }
+    public bool EsVip { get; set; }
 
-    public short nivel_vip { get; set; }
+    public short NivelVip { get; set; }
 
-    public DateOnly? fecha_inicio_vip { get; set; }
+    public DateOnly? FechaInicioVip { get; set; }
 
-    public DateOnly? fecha_fin_vip { get; set; }
+    public DateOnly? FechaFinVip { get; set; }
 
-    public int puntos_acumulados { get; set; }
+    public int PuntosAcumulados { get; set; }
 
-    public int puntos_gastados { get; set; }
+    public int PuntosGastados { get; set; }
 
-    public int puntos_caducados { get; set; }
+    public int PuntosCaducados { get; set; }
 
-    public DateOnly? fecha_nacimiento { get; set; }
+    public DateOnly? FechaNacimiento { get; set; }
 
-    public string? genero { get; set; }
+    public string? Genero { get; set; }
 
-    public string? preferencias { get; set; }
+    public string? Preferencias { get; set; }
 
-    public string? intereses { get; set; }
+    public string? Intereses { get; set; }
 
-    public DateTime? ultima_actividad { get; set; }
+    public DateTime? UltimaActividad { get; set; }
 
-    public int num_logins { get; set; }
+    public int NumLogins { get; set; }
 
-    public DateTime fecha_registro { get; set; }
+    public DateTime FechaRegistro { get; set; }
 
-    public DateTime fecha_actualizacion { get; set; }
+    public DateTime FechaActualizacion { get; set; }
 
-    public string? origen_registro { get; set; }
+    public string? OrigenRegistro { get; set; }
 
-    public string? ubicacion_habitual { get; set; }
+    public string? UbicacionHabitual { get; set; }
 
-    public int fidelidad_score { get; set; }
+    public int FidelidadScore { get; set; }
 
-    public int? edad { get; set; }
+    public int? Edad { get; set; }
 
-    public virtual ICollection<contactos_perfil> contactos_perfils { get; set; } = new List<contactos_perfil>();
+    public virtual ICollection<ContactosPerfil> ContactosPerfils { get; set; } = new List<ContactosPerfil>();
 
-    public virtual ICollection<feedback_interno> feedback_internos { get; set; } = new List<feedback_interno>();
+    public virtual ICollection<CuponesCliente> CuponesClientes { get; set; } = new List<CuponesCliente>();
 
-    public virtual usuario id_usuario_navigation { get; set; } = null!;
+    public virtual ICollection<FeedbackInterno> FeedbackInternos { get; set; } = new List<FeedbackInterno>();
 
-    public virtual ICollection<punto> puntos { get; set; } = new List<punto>();
+    public virtual Usuario IdUsuarioNavigation { get; set; } = null!;
 
-    public virtual ICollection<suscripciones_vip> suscripciones_vips { get; set; } = new List<suscripciones_vip>();
+    public virtual ICollection<Punto> Puntos { get; set; } = new List<Punto>();
 
-    public virtual ICollection<visitas_perfil_actual> visitas_perfil_actuals { get; set; } = new List<visitas_perfil_actual>();
+    public virtual ICollection<SuscripcionesVip> SuscripcionesVips { get; set; } = new List<SuscripcionesVip>();
 
-    public virtual ICollection<visitas_perfil_antiguo> visitas_perfil_antiguos { get; set; } = new List<visitas_perfil_antiguo>();
+    public virtual ICollection<VisitasPerfilActual> VisitasPerfilActuals { get; set; } = new List<VisitasPerfilActual>();
 
-    public virtual ICollection<visitas_perfil> visitas_perfils { get; set; } = new List<visitas_perfil>();
+    public virtual ICollection<VisitasPerfilAntiguo> VisitasPerfilAntiguos { get; set; } = new List<VisitasPerfilAntiguo>();
+
+    public virtual ICollection<VisitasPerfil> VisitasPerfils { get; set; } = new List<VisitasPerfil>();
 }

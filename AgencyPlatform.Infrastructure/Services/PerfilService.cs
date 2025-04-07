@@ -25,7 +25,7 @@ namespace AgencyPlatform.Infrastructure.Services
 
         public async Task<PerfilDto?> GetByIdAsync(int id)
         {
-            var perfil = await _perfilRepository.Query().FirstOrDefaultAsync(p => p.id_perfil == id);
+            var perfil = await _perfilRepository.Query().FirstOrDefaultAsync(p => p.IdPerfil == id);
             return perfil is null ? null : MapToDto(perfil);
         }
 
@@ -40,49 +40,49 @@ namespace AgencyPlatform.Infrastructure.Services
                 throw new ArgumentException($"Errores de validación: {errorMessages}");
             }
 
-            var perfil = new perfile
+            var perfil = new Perfile
             {
-                id_usuario = dto.IdUsuario,
-                id_agencia = dto.IdAgencia,
-                nombre_perfil = dto.NombrePerfil,
-                genero = dto.Genero,
-                edad = (short)(dto.Edad ?? 18),
-                altura = dto.Altura,
-                peso = dto.Peso,
-                medidas = dto.Medidas,
-                color_ojos = dto.ColorOjos,
-                color_cabello = dto.ColorCabello,
-                nacionalidad = dto.Nacionalidad,
-                descripcion = dto.Descripcion,
-                ubicacion_ciudad = dto.UbicacionCiudad,
-                ubicacion_zona = dto.UbicacionZona,
-                disponible_para = dto.DisponiblePara ?? "todos",
-                disponible_24h = dto.Disponible24h ?? false,
-                dispone_local = dto.DisponeLocal ?? false,
-                hace_salidas = dto.HaceSalidas ?? false,
-                es_independiente = dto.EsIndependiente ?? false,
-                telefono_contacto = dto.TelefonoContacto,
-                whatsapp = dto.Whatsapp,
-                email_contacto = dto.EmailContacto,
-                fecha_registro = DateTime.Now,
-                fecha_actualizacion = DateTime.Now,
-                estado = "pendiente",
-                destacado = false,
-                nivel_popularidad = "bajo"
+                IdUsuario = dto.IdUsuario,
+                IdAgencia = dto.IdAgencia,
+                NombrePerfil = dto.NombrePerfil,
+                Genero = dto.Genero,
+                Edad = (short)(dto.Edad ?? 18),
+                Altura = dto.Altura,
+                Peso = dto.Peso,
+                Medidas = dto.Medidas,
+                ColorOjos = dto.ColorOjos,
+                ColorCabello = dto.ColorCabello,
+                Nacionalidad = dto.Nacionalidad,
+                Descripcion = dto.Descripcion,
+                UbicacionCiudad = dto.UbicacionCiudad,
+                UbicacionZona = dto.UbicacionZona,
+                DisponiblePara = dto.DisponiblePara ?? "todos",
+                Disponible24h = dto.Disponible24h ?? false,
+                DisponeLocal = dto.DisponeLocal ?? false,
+                HaceSalidas = dto.HaceSalidas ?? false,
+                EsIndependiente = dto.EsIndependiente ?? false,
+                TelefonoContacto = dto.TelefonoContacto,
+                Whatsapp = dto.Whatsapp,
+                EmailContacto = dto.EmailContacto,
+                FechaRegistro = DateTime.Now,
+                FechaActualizacion = DateTime.Now,
+                Estado = "pendiente",
+                Destacado = false,
+                NivelPopularidad = "bajo"
             };
 
             // Manejar los campos JSONB
             if (dto.Idiomas != null)
-                perfil.idiomas = JsonSerializer.Serialize(dto.Idiomas);
+                perfil.Idiomas = JsonSerializer.Serialize(dto.Idiomas);
 
             if (dto.Servicios != null)
-                perfil.servicios = JsonSerializer.Serialize(dto.Servicios);
+                perfil.Servicios = JsonSerializer.Serialize(dto.Servicios);
 
             if (dto.Tarifas != null)
-                perfil.tarifas = JsonSerializer.Serialize(dto.Tarifas);
+                perfil.Tarifas = JsonSerializer.Serialize(dto.Tarifas);
 
             if (dto.Disponibilidad != null)
-                perfil.disponibilidad = JsonSerializer.Serialize(dto.Disponibilidad);
+                perfil.Disponibilidad = JsonSerializer.Serialize(dto.Disponibilidad);
 
             try
             {
@@ -99,54 +99,54 @@ namespace AgencyPlatform.Infrastructure.Services
 
         public async Task<PerfilDto?> UpdateAsync(int id, UpdatePerfilDto dto)
         {
-            var perfil = await _perfilRepository.Query().FirstOrDefaultAsync(p => p.id_perfil == id);
+            var perfil = await _perfilRepository.Query().FirstOrDefaultAsync(p => p.IdPerfil == id);
             if (perfil == null) return null;
 
-            perfil.nombre_perfil = dto.NombrePerfil ?? perfil.nombre_perfil;
-            perfil.genero = dto.Genero ?? perfil.genero;
-            perfil.edad = (short)(dto.Edad ?? perfil.edad);
-            perfil.altura = dto.Altura ?? perfil.altura;
-            perfil.peso = dto.Peso ?? perfil.peso;
-            perfil.medidas = dto.Medidas ?? perfil.medidas;
-            perfil.color_ojos = dto.ColorOjos ?? perfil.color_ojos;
-            perfil.color_cabello = dto.ColorCabello ?? perfil.color_cabello;
-            perfil.nacionalidad = dto.Nacionalidad ?? perfil.nacionalidad;
+            perfil.NombrePerfil = dto.NombrePerfil ?? perfil.NombrePerfil;
+            perfil.Genero = dto.Genero ?? perfil.Genero;
+            perfil.Edad = (short)(dto.Edad ?? perfil.Edad);
+            perfil.Altura = dto.Altura ?? perfil.Altura;
+            perfil.Peso = dto.Peso ?? perfil.Peso;
+            perfil.Medidas = dto.Medidas ?? perfil.Medidas;
+            perfil.ColorOjos = dto.ColorOjos ?? perfil.ColorOjos;
+            perfil.ColorCabello = dto.ColorCabello ?? perfil.ColorCabello;
+            perfil.Nacionalidad = dto.Nacionalidad ?? perfil.Nacionalidad;
 
             if (dto.Idiomas is not null)
-                perfil.idiomas = JsonSerializer.Serialize(dto.Idiomas);
+                perfil.Idiomas = JsonSerializer.Serialize(dto.Idiomas);
 
             if (dto.Descripcion is string descripcionStr)
-                perfil.descripcion = descripcionStr;
+                perfil.Descripcion = descripcionStr;
 
             if (dto.Servicios is not null)
-                perfil.servicios = JsonSerializer.Serialize(dto.Servicios);
+                perfil.Servicios = JsonSerializer.Serialize(dto.Servicios);
 
             if (dto.Tarifas is not null)
-                perfil.tarifas = JsonSerializer.Serialize(dto.Tarifas);
+                perfil.Tarifas = JsonSerializer.Serialize(dto.Tarifas);
 
-            perfil.ubicacion_ciudad = dto.UbicacionCiudad ?? perfil.ubicacion_ciudad;
-            perfil.ubicacion_zona = dto.UbicacionZona ?? perfil.ubicacion_zona;
+            perfil.UbicacionCiudad = dto.UbicacionCiudad ?? perfil.UbicacionCiudad;
+            perfil.UbicacionZona = dto.UbicacionZona ?? perfil.UbicacionZona;
 
             if (dto.Disponibilidad is not null)
-                perfil.disponibilidad = JsonSerializer.Serialize(dto.Disponibilidad);
+                perfil.Disponibilidad = JsonSerializer.Serialize(dto.Disponibilidad);
 
-            perfil.disponible_para = dto.DisponiblePara ?? perfil.disponible_para;
-            perfil.disponible_24h = dto.Disponible24h ?? perfil.disponible_24h;
-            perfil.dispone_local = dto.DisponeLocal ?? perfil.dispone_local;
-            perfil.hace_salidas = dto.HaceSalidas ?? perfil.hace_salidas;
-            perfil.telefono_contacto = dto.TelefonoContacto ?? perfil.telefono_contacto;
-            perfil.whatsapp = dto.Whatsapp ?? perfil.whatsapp;
-            perfil.email_contacto = dto.EmailContacto ?? perfil.email_contacto;
+            perfil.DisponiblePara = dto.DisponiblePara ?? perfil.DisponiblePara;
+            perfil.Disponible24h = dto.Disponible24h ?? perfil.Disponible24h;
+            perfil.DisponeLocal = dto.DisponeLocal ?? perfil.DisponeLocal;
+            perfil.HaceSalidas = dto.HaceSalidas ?? perfil.HaceSalidas;
+            perfil.TelefonoContacto = dto.TelefonoContacto ?? perfil.TelefonoContacto;
+            perfil.Whatsapp = dto.Whatsapp ?? perfil.Whatsapp;
+            perfil.EmailContacto = dto.EmailContacto ?? perfil.EmailContacto;
 
-            perfil.verificado = dto.Verificado ?? perfil.verificado;
-            perfil.fecha_verificacion = dto.FechaVerificacion ?? perfil.fecha_verificacion;
-            perfil.quien_verifico = dto.QuienVerifico ?? perfil.quien_verifico;
-            perfil.destacado = dto.Destacado ?? perfil.destacado;
-            perfil.fecha_inicio_destacado = dto.FechaInicioDestacado ?? perfil.fecha_inicio_destacado;
-            perfil.fecha_fin_destacado = dto.FechaFinDestacado ?? perfil.fecha_fin_destacado;
-            perfil.estado = dto.Estado ?? perfil.estado;
+            perfil.Verificado = dto.Verificado ?? perfil.Verificado;
+            perfil.FechaVerificacion = dto.FechaVerificacion ?? perfil.FechaVerificacion;
+            perfil.QuienVerifico = dto.QuienVerifico ?? perfil.QuienVerifico;
+            perfil.Destacado = dto.Destacado ?? perfil.Destacado;
+            perfil.FechaInicioDestacado = dto.FechaInicioDestacado ?? perfil.FechaInicioDestacado;
+            perfil.FechaFinDestacado = dto.FechaFinDestacado ?? perfil.FechaFinDestacado;
+            perfil.Estado = dto.Estado ?? perfil.Estado;
 
-            perfil.fecha_actualizacion = DateTime.UtcNow;
+            perfil.FechaActualizacion = DateTime.UtcNow;
 
             await _perfilRepository.SaveChangesAsync();
             return MapToDto(perfil);
@@ -154,7 +154,7 @@ namespace AgencyPlatform.Infrastructure.Services
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var perfil = await _perfilRepository.Query().FirstOrDefaultAsync(p => p.id_perfil == id);
+            var perfil = await _perfilRepository.Query().FirstOrDefaultAsync(p => p.IdPerfil == id);
             if (perfil == null) return false;
 
             _perfilRepository.Remove(perfil);  // Llamada al repositorio para eliminar el perfil
@@ -163,51 +163,51 @@ namespace AgencyPlatform.Infrastructure.Services
         }
 
 
-        private static PerfilDto MapToDto(perfile p)
+        private static PerfilDto MapToDto(Perfile p)
         {
             return new PerfilDto
             {
-                Id = p.id_perfil,
-                IdUsuario = p.id_usuario,
-                IdAgencia = p.id_agencia,
-                NombrePerfil = p.nombre_perfil,
-                Genero = p.genero,
-                Edad = p.edad,
-                Altura = p.altura,
-                Peso = p.peso,
-                Medidas = p.medidas,
-                ColorOjos = p.color_ojos,
-                ColorCabello = p.color_cabello,
-                Nacionalidad = p.nacionalidad,
-                Idiomas = p.idiomas,
-                Descripcion = p.descripcion,
-                Servicios = p.servicios,
-                Tarifas = p.tarifas,
-                UbicacionCiudad = p.ubicacion_ciudad,
-                UbicacionZona = p.ubicacion_zona,
-                Disponibilidad = p.disponibilidad,
-                DisponiblePara = p.disponible_para,
-                Disponible24h = p.disponible_24h,
-                DisponeLocal = p.dispone_local,
-                HaceSalidas = p.hace_salidas,
-                Verificado = p.verificado,
-                FechaVerificacion = p.fecha_verificacion,
-                QuienVerifico = p.quien_verifico,
-                EsIndependiente = p.es_independiente,
-                TelefonoContacto = p.telefono_contacto,
-                Whatsapp = p.whatsapp,
-                EmailContacto = p.email_contacto,
-                FechaRegistro = p.fecha_registro,
-                FechaActualizacion = p.fecha_actualizacion,
-                Estado = p.estado,
-                Destacado = p.destacado,
-                FechaInicioDestacado = p.fecha_inicio_destacado,
-                FechaFinDestacado = p.fecha_fin_destacado,
-                UltimoOnline = p.ultimo_online,
-                NumVisitas = p.num_visitas,
-                NumContactos = p.num_contactos,
-                PuntuacionInterna = p.puntuacion_interna,
-                NivelPopularidad = p.nivel_popularidad
+                Id = p.IdPerfil,
+                IdUsuario = p.IdUsuario,
+                IdAgencia = p.IdAgencia,
+                NombrePerfil = p.NombrePerfil,
+                Genero = p.Genero,
+                Edad = p.Edad,
+                Altura = p.Altura,
+                Peso = p.Peso,
+                Medidas = p.Medidas,
+                ColorOjos = p.ColorOjos,
+                ColorCabello = p.ColorCabello,
+                Nacionalidad = p.Nacionalidad,
+                Idiomas = p.Idiomas,
+                Descripcion = p.Descripcion,
+                Servicios = p.Servicios,
+                Tarifas = p.Tarifas,
+                UbicacionCiudad = p.UbicacionCiudad,
+                UbicacionZona = p.UbicacionZona,
+                Disponibilidad = p.Disponibilidad,
+                DisponiblePara = p.DisponiblePara,
+                Disponible24h = p.Disponible24h,
+                DisponeLocal = p.DisponeLocal,
+                HaceSalidas = p.HaceSalidas,
+                Verificado = p.Verificado,
+                FechaVerificacion = p.FechaVerificacion,
+                QuienVerifico = p.QuienVerifico,
+                EsIndependiente = p.EsIndependiente,
+                TelefonoContacto = p.TelefonoContacto,
+                Whatsapp = p.Whatsapp,
+                EmailContacto = p.EmailContacto,
+                FechaRegistro = p.FechaRegistro,
+                FechaActualizacion = p.FechaActualizacion,
+                Estado = p.Estado,
+                Destacado = p.Destacado,
+                FechaInicioDestacado = p.FechaInicioDestacado,
+                FechaFinDestacado = p.FechaFinDestacado,
+                UltimoOnline = p.UltimoOnline,
+                NumVisitas = p.NumVisitas,
+                NumContactos = p.NumContactos,
+                PuntuacionInterna = p.PuntuacionInterna,
+                NivelPopularidad = p.NivelPopularidad
             };
         }
     }

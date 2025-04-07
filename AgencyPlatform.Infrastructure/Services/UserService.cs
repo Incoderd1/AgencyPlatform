@@ -40,32 +40,32 @@ namespace AgencyPlatform.Infrastructure.Services
             var ip = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString() ?? "127.0.0.1";
             var now = DateTime.UtcNow;
 
-            var user = new usuario
+            var user = new Usuario
             {
-                uuid = Guid.NewGuid(),
-                email = dto.Email,
-                contrasena = hashedPassword,
-                salt = salt,
-                tipo_usuario = dto.TipoUsuario ?? "cliente",
-                metodo_auth = "password",
-                factor_2fa = false,
-                estado = "pendiente",
-                verificado_email = false,
-                fecha_registro = now,
-                fecha_actualizacion = now,
-                ip_registro = ip,
-                ultimo_ip = ip
+                Uuid = Guid.NewGuid(),
+                Email = dto.Email,
+                Contrasena = hashedPassword,
+                Salt = salt,
+                TipoUsuario = dto.TipoUsuario ?? "cliente",
+                MetodoAuth = "password",
+                Factor2fa = false,
+                Estado = "pendiente",
+                VerificadoEmail = false,
+                FechaRegistro = now,
+                FechaActualizacion = now,
+                IpRegistro = ip,
+                UltimoIp = ip
             };
 
             var token = Guid.NewGuid().ToString("N");
-            user.token_verificacion = token;
-            user.fecha_expiracion_token = now.AddHours(24);
+            user.TokenVerificacion = token;
+            user.FechaExpiracionToken = now.AddHours(24);
 
             await _userRepository.AddAsync(user);
             await _userRepository.SaveChangesAsync();
 
             var verificationLink = $"{_config["Frontend:BaseUrl"]}/verificar?token={token}";
-            await _emailSender.SendEmailAsync(user.email!, "Verifica tu cuenta",
+            await _emailSender.SendEmailAsync(user.Email!, "Verifica tu cuenta",
                 $"Hola! Gracias por registrarte. Verifica tu correo haciendo clic aquí: <a href='{verificationLink}'>Verificar cuenta</a>");
 
             return GenerateToken(user);
@@ -77,17 +77,17 @@ namespace AgencyPlatform.Infrastructure.Services
             if (user == null)
                 throw new UnauthorizedAccessException("Usuario no encontrado. Revisa tu correo o regístrate.");
 
-            if (!PasswordHasher.VerifyPassword(dto.Password, user.contrasena!, user.salt!))
+            if (!PasswordHasher.VerifyPassword(dto.Password, user.Contrasena!, user.Salt!))
                 throw new UnauthorizedAccessException("La contraseña ingresada no es válida.");
 
-            user.ultimo_ip = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
-            user.ultimo_login = DateTime.UtcNow;
+            user.UltimoIp = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
+            user.UltimoLogin = DateTime.UtcNow;
             await _userRepository.SaveChangesAsync();
 
             return GenerateToken(user);
         }
 
-        private AuthResponseDto GenerateToken(usuario user)
+        private AuthResponseDto GenerateToken(Usuario user)
         {
             var jwtKey = _config["Jwt:Key"]!;
             var jwtIssuer = _config["Jwt:Issuer"]!;
@@ -98,9 +98,9 @@ namespace AgencyPlatform.Infrastructure.Services
 
             var claims = new[]
             {
-                new Claim("id", user.id_usuario.ToString()),
-                new Claim(ClaimTypes.Email, user.email!),
-                new Claim(ClaimTypes.Role, user.tipo_usuario!)
+                new Claim("id", user.IdUsuario.ToString()),
+                new Claim(ClaimTypes.Email, user.Email!),
+                new Claim(ClaimTypes.Role, user.TipoUsuario!)
             };
 
             var token = new JwtSecurityToken(
@@ -115,47 +115,45 @@ namespace AgencyPlatform.Infrastructure.Services
             {
                 Token = new JwtSecurityTokenHandler().WriteToken(token),
                 Expiration = token.ValidTo,
-                Email = user.email!,
-                TipoUsuario = user.tipo_usuario!
+                Email = user.Email!,
+                TipoUsuario = user.TipoUsuario!
             };
         }
 
         public async Task<string> ConfirmEmailAsync(string token, int? userId = null)
         {
-            // Si se proporciona un userId, verifica directamente por ID
             if (userId.HasValue)
             {
                 var userById = await _userRepository.GetByIdAsync(userId.Value);
                 if (userById == null)
                     throw new ApplicationException("Usuario no encontrado.");
 
-                if (userById.verificado_email)
+                if (userById.VerificadoEmail)
                     return "El correo ya está verificado.";
 
-                userById.verificado_email = true;
-                userById.estado = "activo";
-                userById.fecha_actualizacion = DateTime.UtcNow;
+                userById.VerificadoEmail = true;
+                userById.Estado = "activo";
+                userById.FechaActualizacion = DateTime.UtcNow;
 
                 await _userRepository.SaveChangesAsync();
 
                 return "Correo verificado correctamente.";
             }
 
-            // Si no se proporciona un userId, verifica por token como antes
             var user = await _userRepository.Query()
-                .FirstOrDefaultAsync(u => u.token_verificacion == token && !u.verificado_email);
+                .FirstOrDefaultAsync(u => u.TokenVerificacion == token && !u.VerificadoEmail);
 
             if (user == null)
                 throw new ApplicationException("Token inválido o expirado.");
 
-            if (user.fecha_expiracion_token < DateTime.UtcNow)
+            if (user.FechaExpiracionToken < DateTime.UtcNow)
                 throw new ApplicationException("El token ha expirado.");
 
-            user.verificado_email = true;
-            user.token_verificacion = null;
-            user.fecha_expiracion_token = null;
-            user.estado = "activo";
-            user.fecha_actualizacion = DateTime.UtcNow;
+            user.VerificadoEmail = true;
+            user.TokenVerificacion = null;
+            user.FechaExpiracionToken = null;
+            user.Estado = "activo";
+            user.FechaActualizacion = DateTime.UtcNow;
 
             await _userRepository.SaveChangesAsync();
 
@@ -169,18 +167,18 @@ namespace AgencyPlatform.Infrastructure.Services
             if (user == null)
                 throw new ApplicationException("No se encontró ningún usuario con ese correo.");
 
-            if (user.verificado_email)
+            if (user.VerificadoEmail)
                 throw new ApplicationException("Este correo ya ha sido verificado.");
 
-            user.token_verificacion = TokenGenerator.GenerateToken();
-            user.fecha_expiracion_token = DateTime.UtcNow.AddHours(2);
-            user.fecha_actualizacion = DateTime.UtcNow;
+            user.TokenVerificacion = TokenGenerator.GenerateToken();
+            user.FechaExpiracionToken = DateTime.UtcNow.AddHours(2);
+            user.FechaActualizacion = DateTime.UtcNow;
 
             await _userRepository.SaveChangesAsync();
 
-            var verificationLink = $"{_config["Frontend:BaseUrl"]}/verificar?token={user.token_verificacion}";
+            var verificationLink = $"{_config["Frontend:BaseUrl"]}/verificar?token={user.TokenVerificacion}";
 
-            await _emailSender.SendEmailAsync(user.email!, "Reenvío de verificación",
+            await _emailSender.SendEmailAsync(user.Email!, "Reenvío de verificación",
                 $"Hola! Reenvío del enlace para verificar tu correo: <a href='{verificationLink}'>Verificar ahora</a>");
         }
 
@@ -190,86 +188,63 @@ namespace AgencyPlatform.Infrastructure.Services
             if (user == null)
                 throw new ApplicationException("El correo no está registrado.");
 
-            user.token_verificacion = TokenGenerator.GenerateToken();
-            user.fecha_expiracion_token = DateTime.UtcNow.AddHours(2);
-            user.fecha_actualizacion = DateTime.UtcNow;
+            user.TokenVerificacion = TokenGenerator.GenerateToken();
+            user.FechaExpiracionToken = DateTime.UtcNow.AddHours(2);
+            user.FechaActualizacion = DateTime.UtcNow;
 
             await _userRepository.SaveChangesAsync();
 
-            var resetLink = $"{_config["Frontend:BaseUrl"]}/reset-password?token={user.token_verificacion}";
+            var resetLink = $"{_config["Frontend:BaseUrl"]}/reset-password?token={user.TokenVerificacion}";
 
-            await _emailSender.SendEmailAsync(user.email!, "Recuperación de contraseña",
+            await _emailSender.SendEmailAsync(user.Email!, "Recuperación de contraseña",
                 $"<p>Haz clic en el siguiente enlace para restablecer tu contraseña:</p><a href='{resetLink}'>Restablecer ahora</a>");
         }
 
         public async Task ResetPasswordAsync(ResetPasswordRequestDto dto)
         {
             var user = await _userRepository.Query()
-                .FirstOrDefaultAsync(u => u.token_verificacion == dto.Token);
+                .FirstOrDefaultAsync(u => u.TokenVerificacion == dto.Token);
 
             if (user == null)
                 throw new ApplicationException("Token inválido o expirado.");
 
-            if (user.fecha_expiracion_token < DateTime.UtcNow)
+            if (user.FechaActualizacion < DateTime.UtcNow)
                 throw new ApplicationException("El token ha expirado.");
 
             var salt = PasswordHasher.GenerateSalt();
-            user.contrasena = PasswordHasher.HashPassword(dto.NewPassword, salt);
-            user.salt = salt;
+            user.Contrasena = PasswordHasher.HashPassword(dto.NewPassword, salt);
+            user.Salt = salt;
 
-            user.token_verificacion = null;
-            user.fecha_expiracion_token = null;
-            user.fecha_actualizacion = DateTime.UtcNow;
+            user.TokenVerificacion = null;
+            user.FechaExpiracionToken = null;
+            user.FechaActualizacion = DateTime.UtcNow;
 
             await _userRepository.SaveChangesAsync();
         }
 
-        public async Task<PaginatedResultDto<UserDto>> GetUsersAsync(int page, int pageSize)
+        public async Task<PaginatedResult<UserDto>> GetUsersAsync(int page, int pageSize)
         {
-            // Validar los parámetros
             if (page < 1)
                 page = 1;
             if (pageSize < 1 || pageSize > 100)
                 pageSize = 10;
 
-            // Calcular el número de registros a omitir
-            var skip = (page - 1) * pageSize;
-
-            // Obtener el total de registros
-            var totalItems = await _userRepository.Query().CountAsync();
-
-            // Obtener los usuarios paginados
-            var users = await _userRepository.Query()
-                .OrderByDescending(u => u.fecha_registro)
-                .Skip(skip)
-                .Take(pageSize)
+            var query = _userRepository.Query()
+                .OrderByDescending(u => u.FechaRegistro)
                 .Select(u => new UserDto
                 {
-                    Id = u.id_usuario,
-                    Email = u.email,
-                    TipoUsuario = u.tipo_usuario,
-                    Estado = u.estado,
-                    VerificadoEmail = u.verificado_email,
-                    Factor2FA = u.factor_2fa,
-                    FechaRegistro = u.fecha_registro,
-                    UltimoLogin = u.ultimo_login
-                })
-                .ToListAsync();
+                    Id = u.IdUsuario,
+                    Email = u.Email,
+                    TipoUsuario = u.TipoUsuario,
+                    Estado = u.Estado,
+                    VerificadoEmail = u.VerificadoEmail,
+                    Factor2FA = u.Factor2fa,
+                    FechaRegistro = u.FechaRegistro,
+                    UltimoLogin = u.UltimoLogin
+                });
 
-            // Calcular el número total de páginas
-            var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
-
-            // Crear y devolver el resultado paginado
-            return new PaginatedResultDto<UserDto>
-            {
-                Items = users,
-                Page = page,
-                PageSize = pageSize,
-                TotalItems = totalItems,
-                TotalPages = totalPages,
-                HasPreviousPage = page > 1,
-                HasNextPage = page < totalPages
-            };
+            return await PaginationHelper.CreateAsync(query, page, pageSize);
         }
+
     }
 }

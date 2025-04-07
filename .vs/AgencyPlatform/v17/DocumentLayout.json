@@ -3,8 +3,136 @@
   "WorkspaceRootPath": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2509F7E3-F231-4237-8061-2568F108EBC5}|AgencyPlatform.Application\\AgencyPlatform.Application.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.application\\interfaces\\services\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2509F7E3-F231-4237-8061-2568F108EBC5}|AgencyPlatform.Application\\AgencyPlatform.Application.csproj|solutionrelative:agencyplatform.application\\interfaces\\services\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1D9543FA-D219-4D2F-8BA0-0D89D30D326D}|AgencyPlatform.API\\AgencyPlatform.API.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D9543FA-D219-4D2F-8BA0-0D89D30D326D}|AgencyPlatform.API\\AgencyPlatform.API.csproj|solutionrelative:agencyplatform.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\services\\visitasperfil\\visitasperfilservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\services\\visitasperfil\\visitasperfilservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\repositories\\visitasperfilrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\repositories\\visitasperfilrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2509F7E3-F231-4237-8061-2568F108EBC5}|AgencyPlatform.Application\\AgencyPlatform.Application.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.application\\interfaces\\services\\visitasperfil\\ivisitasperfilservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2509F7E3-F231-4237-8061-2568F108EBC5}|AgencyPlatform.Application\\AgencyPlatform.Application.csproj|solutionrelative:agencyplatform.application\\interfaces\\services\\visitasperfil\\ivisitasperfilservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\repositories\\ivisitasperfilrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\repositories\\ivisitasperfilrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D9543FA-D219-4D2F-8BA0-0D89D30D326D}|AgencyPlatform.API\\AgencyPlatform.API.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.api\\controllers\\visitasperfilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D9543FA-D219-4D2F-8BA0-0D89D30D326D}|AgencyPlatform.API\\AgencyPlatform.API.csproj|solutionrelative:agencyplatform.api\\controllers\\visitasperfilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2509F7E3-F231-4237-8061-2568F108EBC5}|AgencyPlatform.Application\\AgencyPlatform.Application.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.application\\dtos\\visitasperfil\\crearvisitaperfildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2509F7E3-F231-4237-8061-2568F108EBC5}|AgencyPlatform.Application\\AgencyPlatform.Application.csproj|solutionrelative:agencyplatform.application\\dtos\\visitasperfil\\crearvisitaperfildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\agencyplatform.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\agencyplatform.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2509F7E3-F231-4237-8061-2568F108EBC5}|AgencyPlatform.Application\\AgencyPlatform.Application.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.application\\validators\\visitasperfil\\crearvisitaperfildtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2509F7E3-F231-4237-8061-2568F108EBC5}|AgencyPlatform.Application\\AgencyPlatform.Application.csproj|solutionrelative:agencyplatform.application\\validators\\visitasperfil\\crearvisitaperfildtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2509F7E3-F231-4237-8061-2568F108EBC5}|AgencyPlatform.Application\\AgencyPlatform.Application.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.application\\dtos\\visitasperfil\\visitaperfildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2509F7E3-F231-4237-8061-2568F108EBC5}|AgencyPlatform.Application\\AgencyPlatform.Application.csproj|solutionrelative:agencyplatform.application\\dtos\\visitasperfil\\visitaperfildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\imagenes_perfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\imagenes_perfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\repositories\\cuponesclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\repositories\\cuponesclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\perfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\perfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\historialacceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\historialacceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\historial_acceso_pasado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\historial_acceso_pasado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\historial_acceso_archivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\historial_acceso_archivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\historial_configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\historial_configuracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\agencyplatformdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\agencyplatformdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D9543FA-D219-4D2F-8BA0-0D89D30D326D}|AgencyPlatform.API\\AgencyPlatform.API.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1D9543FA-D219-4D2F-8BA0-0D89D30D326D}|AgencyPlatform.API\\AgencyPlatform.API.csproj|solutionrelative:agencyplatform.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\agencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\agencia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\accionesantifrauide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\accionesantifrauide.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D9543FA-D219-4D2F-8BA0-0D89D30D326D}|AgencyPlatform.API\\AgencyPlatform.API.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.api\\controllers\\imagenperfilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D9543FA-D219-4D2F-8BA0-0D89D30D326D}|AgencyPlatform.API\\AgencyPlatform.API.csproj|solutionrelative:agencyplatform.api\\controllers\\imagenperfilcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D9543FA-D219-4D2F-8BA0-0D89D30D326D}|AgencyPlatform.API\\AgencyPlatform.API.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.api\\controllers\\agenciascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D9543FA-D219-4D2F-8BA0-0D89D30D326D}|AgencyPlatform.API\\AgencyPlatform.API.csproj|solutionrelative:agencyplatform.api\\controllers\\agenciascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\membresiasvip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\membresiasvip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\services\\suscripcionesvip\\suscripcionvipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\services\\suscripcionesvip\\suscripcionvipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\data\\entities\\suscripcionesvip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\data\\entities\\suscripcionesvip.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\repositories\\isuscripcionviprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\repositories\\isuscripcionviprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\services\\imagenperfilservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\services\\imagenperfilservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\services\\membresiavipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\services\\membresiavipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\repositories\\suscripcionviprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\repositories\\suscripcionviprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|c:\\users\\siric\\onedrive\\escritorio\\agencyplatform\\agencyplatform.infrastructure\\services\\agenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A0D884C6-3198-44D4-AFAA-C495D6154994}|AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj|solutionrelative:agencyplatform.infrastructure\\services\\agenciaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +147,405 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IEmailSender.cs",
-              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Application\\Interfaces\\Services\\IEmailSender.cs",
-              "RelativeDocumentMoniker": "AgencyPlatform.Application\\Interfaces\\Services\\IEmailSender.cs",
-              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Application\\Interfaces\\Services\\IEmailSender.cs",
-              "RelativeToolTip": "AgencyPlatform.Application\\Interfaces\\Services\\IEmailSender.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\Program.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.API\\Program.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\Program.cs",
+              "RelativeToolTip": "AgencyPlatform.API\\Program.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEsAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T16:24:28.174Z",
+              "WhenOpened": "2025-04-07T18:15:24.395Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VisitasPerfilService.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Services\\VisitasPerfil\\VisitasPerfilService.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Services\\VisitasPerfil\\VisitasPerfilService.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Services\\VisitasPerfil\\VisitasPerfilService.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Services\\VisitasPerfil\\VisitasPerfilService.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAgwFUAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T14:11:27.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IVisitasPerfilService.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Application\\Interfaces\\Services\\VisitasPerfil\\IVisitasPerfilService.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Application\\Interfaces\\Services\\VisitasPerfil\\IVisitasPerfilService.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Application\\Interfaces\\Services\\VisitasPerfil\\IVisitasPerfilService.cs",
+              "RelativeToolTip": "AgencyPlatform.Application\\Interfaces\\Services\\VisitasPerfil\\IVisitasPerfilService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T14:10:51.084Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IVisitasPerfilRepository.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Repositories\\IVisitasPerfilRepository.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Repositories\\IVisitasPerfilRepository.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Repositories\\IVisitasPerfilRepository.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Repositories\\IVisitasPerfilRepository.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA9wBYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T14:03:52.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VisitasPerfilRepository.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Repositories\\VisitasPerfilRepository.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Repositories\\VisitasPerfilRepository.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Repositories\\VisitasPerfilRepository.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Repositories\\VisitasPerfilRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T14:05:40.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VisitasPerfilController.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\Controllers\\VisitasPerfilController.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.API\\Controllers\\VisitasPerfilController.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\Controllers\\VisitasPerfilController.cs",
+              "RelativeToolTip": "AgencyPlatform.API\\Controllers\\VisitasPerfilController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T18:04:09.808Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CrearVisitaPerfilDto.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Application\\DTOs\\VisitasPerfil\\CrearVisitaPerfilDto.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Application\\DTOs\\VisitasPerfil\\CrearVisitaPerfilDto.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Application\\DTOs\\VisitasPerfil\\CrearVisitaPerfilDto.cs",
+              "RelativeToolTip": "AgencyPlatform.Application\\DTOs\\VisitasPerfil\\CrearVisitaPerfilDto.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAkwBAAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:59:52.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AgencyPlatform.Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\AgencyPlatform.Infrastructure.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-07T17:16:10.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CrearVisitaPerfilDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Application\\Validators\\VisitasPerfil\\CrearVisitaPerfilDtoValidator.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Application\\Validators\\VisitasPerfil\\CrearVisitaPerfilDtoValidator.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Application\\Validators\\VisitasPerfil\\CrearVisitaPerfilDtoValidator.cs",
+              "RelativeToolTip": "AgencyPlatform.Application\\Validators\\VisitasPerfil\\CrearVisitaPerfilDtoValidator.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAA4wB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T15:35:18.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VisitaPerfilDto.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Application\\DTOs\\VisitasPerfil\\VisitaPerfilDto.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Application\\DTOs\\VisitasPerfil\\VisitaPerfilDto.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Application\\DTOs\\VisitasPerfil\\VisitaPerfilDto.cs",
+              "RelativeToolTip": "AgencyPlatform.Application\\DTOs\\VisitasPerfil\\VisitaPerfilDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T14:00:16.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "imagenes_perfil.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\imagenes_perfil.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\imagenes_perfil.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\imagenes_perfil.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\imagenes_perfil.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAawD8AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:06:04.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CuponesClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Repositories\\CuponesClienteRepository.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Repositories\\CuponesClienteRepository.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Repositories\\CuponesClienteRepository.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Repositories\\CuponesClienteRepository.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAAABwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:05:54.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\Usuario.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\Usuario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:05:18.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Perfile.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\Perfile.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\Perfile.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\Perfile.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\Perfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:00:19.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HistorialAcceso.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\HistorialAcceso.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\HistorialAcceso.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\HistorialAcceso.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\HistorialAcceso.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:00:08.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "historial_acceso_pasado.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\historial_acceso_pasado.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\historial_acceso_pasado.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\historial_acceso_pasado.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\historial_acceso_pasado.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:00:03.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "historial_acceso_archivo.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\historial_acceso_archivo.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\historial_acceso_archivo.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\historial_acceso_archivo.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\historial_acceso_archivo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T13:00:02.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "historial_configuracion.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\historial_configuracion.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\historial_configuracion.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\historial_configuracion.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\historial_configuracion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:58:45.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\Cliente.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\Cliente.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\Cliente.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\Cliente.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAYwBMAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:58:13.455Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Agencia.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\Agencia.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\Agencia.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\Agencia.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\Agencia.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:57:06.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\appsettings.json",
+              "RelativeDocumentMoniker": "AgencyPlatform.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\appsettings.json",
+              "RelativeToolTip": "AgencyPlatform.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-07T12:51:00.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AgencyPlatformDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\AgencyPlatformDbContext.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\AgencyPlatformDbContext.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\AgencyPlatformDbContext.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\AgencyPlatformDbContext.cs",
+              "ViewState": "AQIAAFwAAAAAAAAAAAA9wGwAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:43:43.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AccionesAntifrauide.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\AccionesAntifrauide.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\AccionesAntifrauide.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\AccionesAntifrauide.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\AccionesAntifrauide.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:43:11.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ImagenPerfilController.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\Controllers\\ImagenPerfilController.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.API\\Controllers\\ImagenPerfilController.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\Controllers\\ImagenPerfilController.cs",
+              "RelativeToolTip": "AgencyPlatform.API\\Controllers\\ImagenPerfilController.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAEwAoAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:39:14.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AgenciasController.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\Controllers\\AgenciasController.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.API\\Controllers\\AgenciasController.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\Controllers\\AgenciasController.cs",
+              "RelativeToolTip": "AgencyPlatform.API\\Controllers\\AgenciasController.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAYwCkAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:30:12.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "MembresiasVip.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\MembresiasVip.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\MembresiasVip.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\MembresiasVip.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\MembresiasVip.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAcwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T12:28:48.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SuscripcionesVip.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\SuscripcionesVip.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Data\\Entities\\SuscripcionesVip.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Data\\Entities\\SuscripcionesVip.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Data\\Entities\\SuscripcionesVip.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T11:55:23.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SuscripcionVipService.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Services\\SuscripcionesVip\\SuscripcionVipService.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Services\\SuscripcionesVip\\SuscripcionVipService.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Services\\SuscripcionesVip\\SuscripcionVipService.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Services\\SuscripcionesVip\\SuscripcionVipService.cs",
+              "ViewState": "AQIAAIgAAAAAAAAAAAAkwIsAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T11:49:48.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "ISuscripcionVipRepository.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Repositories\\ISuscripcionVipRepository.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Repositories\\ISuscripcionVipRepository.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Repositories\\ISuscripcionVipRepository.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Repositories\\ISuscripcionVipRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T11:46:18.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "SuscripcionVipRepository.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Repositories\\SuscripcionVipRepository.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Repositories\\SuscripcionVipRepository.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Repositories\\SuscripcionVipRepository.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Repositories\\SuscripcionVipRepository.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T11:44:30.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ImagenPerfilService.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Services\\ImagenPerfilService.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Services\\ImagenPerfilService.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Services\\ImagenPerfilService.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Services\\ImagenPerfilService.cs",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAswKUAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T11:31:08.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MembresiaVipService.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Services\\MembresiaVipService.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Services\\MembresiaVipService.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Services\\MembresiaVipService.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Services\\MembresiaVipService.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAmwDsAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T11:27:52.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AgenciaService.cs",
+              "DocumentMoniker": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Services\\AgenciaService.cs",
+              "RelativeDocumentMoniker": "AgencyPlatform.Infrastructure\\Services\\AgenciaService.cs",
+              "ToolTip": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.Infrastructure\\Services\\AgenciaService.cs",
+              "RelativeToolTip": "AgencyPlatform.Infrastructure\\Services\\AgenciaService.cs",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAiwLAAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-07T04:20:04.173Z"
             }
           ]
         }

@@ -15,14 +15,14 @@ namespace AgencyPlatform.Infrastructure.Repositories
             _context = context;
         }
 
-        public async Task<perfile?> GetByIdAsync(int id)
+        public async Task<Perfile?> GetByIdAsync(int id)
         {
-            return await _context.perfiles.FindAsync(id);
+            return await _context.Perfiles.FindAsync(id);
         }
 
-        public async Task AddAsync(perfile perfil)
+        public async Task AddAsync(Perfile perfil)
         {
-            await _context.perfiles.AddAsync(perfil);
+            await _context.Perfiles.AddAsync(perfil);
         }
 
         public async Task SaveChangesAsync()
@@ -30,21 +30,21 @@ namespace AgencyPlatform.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public IQueryable<perfile> Query()
+        public IQueryable<Perfile> Query()
         {
-            return _context.perfiles.AsQueryable();
+            return _context.Perfiles.AsQueryable();
         }
 
-        public async Task<List<perfile>> GetPaginatedAsync(int page, int pageSize)
+        public async Task<List<Perfile>> GetPaginatedAsync(int page, int pageSize)
         {
-            return await _context.perfiles
+            return await _context.Perfiles
                 .Skip((page - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
         }
-        public void Remove(perfile perfil)
+        public void Remove(Perfile perfil)
         {
-            _context.perfiles.Remove(perfil);  // Llamada al método Remove de DbSet
+            _context.Perfiles.Remove(perfil);  // Llamada al método Remove de DbSet
         }
     }
 }

@@ -3,75 +3,75 @@ using System.Collections.Generic;
 
 namespace AgencyPlatform.Infrastructure.Data.Entities;
 
-public partial class verificacione
+public partial class Verificacione
 {
-    public int id_verificacion { get; set; }
+    public int IdVerificacion { get; set; }
 
-    public string codigo_verificacion { get; set; } = null!;
+    public string CodigoVerificacion { get; set; } = null!;
 
-    public string tipo_entidad { get; set; } = null!;
+    public string TipoEntidad { get; set; } = null!;
 
-    public int id_entidad { get; set; }
+    public int IdEntidad { get; set; }
 
-    public string estado { get; set; } = null!;
+    public string Estado { get; set; } = null!;
 
-    public short nivel_verificacion { get; set; }
+    public short NivelVerificacion { get; set; }
 
-    public string? documentos_url { get; set; }
+    public string? DocumentosUrl { get; set; }
 
-    public string? documentos_hash { get; set; }
+    public string? DocumentosHash { get; set; }
 
-    public DateOnly? fecha_caducidad_documentos { get; set; }
+    public DateOnly? FechaCaducidadDocumentos { get; set; }
 
-    public string? notas_admin { get; set; }
+    public string? NotasAdmin { get; set; }
 
-    public string? notas_internas { get; set; }
+    public string? NotasInternas { get; set; }
 
-    public string? checklist_verificacion { get; set; }
+    public string? ChecklistVerificacion { get; set; }
 
-    public string? motivo_rechazo { get; set; }
+    public string? MotivoRechazo { get; set; }
 
-    public string? sugerencias_correccion { get; set; }
+    public string? SugerenciasCorreccion { get; set; }
 
-    public int? verificado_por { get; set; }
+    public int? VerificadoPor { get; set; }
 
-    public string? historial_estados { get; set; }
+    public string? HistorialEstados { get; set; }
 
-    public decimal? puntuacion_riesgo { get; set; }
+    public decimal? PuntuacionRiesgo { get; set; }
 
-    public DateTime fecha_solicitud { get; set; }
+    public DateTime FechaSolicitud { get; set; }
 
-    public DateTime? fecha_asignacion { get; set; }
+    public DateTime? FechaAsignacion { get; set; }
 
-    public DateTime? fecha_ultima_actualizacion { get; set; }
+    public DateTime? FechaUltimaActualizacion { get; set; }
 
-    public DateTime? fecha_verificacion { get; set; }
+    public DateTime? FechaVerificacion { get; set; }
 
-    public int? tiempo_proceso { get; set; }
+    public int? TiempoProceso { get; set; }
 
-    public DateTime? valido_desde { get; set; }
+    public DateTime? ValidoDesde { get; set; }
 
-    public DateTime? valido_hasta { get; set; }
+    public DateTime? ValidoHasta { get; set; }
 
-    public bool renovacion_automatica { get; set; }
+    public bool RenovacionAutomatica { get; set; }
 
-    public bool recordatorio_enviado { get; set; }
+    public bool RecordatorioEnviado { get; set; }
 
-    public bool pago_recibido { get; set; }
+    public bool PagoRecibido { get; set; }
 
-    public decimal? monto_pagado { get; set; }
+    public decimal? MontoPagado { get; set; }
 
-    public string moneda { get; set; } = null!;
+    public string Moneda { get; set; } = null!;
 
-    public int? id_transaccion { get; set; }
+    public int? IdTransaccion { get; set; }
 
-    public string? metodo_pago { get; set; }
+    public string? MetodoPago { get; set; }
 
-    public string prioridad { get; set; } = null!;
+    public string Prioridad { get; set; } = null!;
 
-    public string? origen_solicitud { get; set; }
+    public string? OrigenSolicitud { get; set; }
 
-    public virtual ICollection<historial_verificacione> historial_verificaciones { get; set; } = new List<historial_verificacione>();
+    public virtual ICollection<HistorialVerificacione> HistorialVerificaciones { get; set; } = new List<HistorialVerificacione>();
 
-    public virtual usuario? verificado_porNavigation { get; set; }
+    public virtual Usuario? VerificadoPorNavigation { get; set; }
 }

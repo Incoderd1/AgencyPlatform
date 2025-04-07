@@ -1,5 +1,6 @@
 ﻿using AgencyPlatform.Application.DTOs.PerfilImagen;
 using AgencyPlatform.Application.Interfaces.Services;
+using AgencyPlatform.Infrastructure.Data;
 using AgencyPlatform.Infrastructure.Data.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

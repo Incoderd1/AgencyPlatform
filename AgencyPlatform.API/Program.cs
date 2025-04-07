@@ -1,7 +1,10 @@
 ﻿using AgencyPlatform.API.Middlewares;
 using AgencyPlatform.Application.Interfaces.Repositories;
 using AgencyPlatform.Application.Interfaces.Services;
+using AgencyPlatform.Application.Interfaces.Services.Cupones;
+using AgencyPlatform.Application.Interfaces.Services.Puntos;
 using AgencyPlatform.Application.Validators;
+using AgencyPlatform.Application.Validators.CuponesCliente;
 using AgencyPlatform.Infrastructure.Data;
 using AgencyPlatform.Infrastructure.Data.Entities;
 using AgencyPlatform.Infrastructure.Repositories;
@@ -17,6 +20,14 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Text;
+using AgencyPlatform.Infrastructure.Services.Cupones;
+using AgencyPlatform.Application.Interfaces.Services.MembresiasVip;
+using AgencyPlatform.Application.Interfaces.Services.SuscripcionesVip;
+using AgencyPlatform.Infrastructure.Services.SuscripcionesVip;
+using AgencyPlatform.Application.Validators.SuscripcionesVip;
+using AgencyPlatform.Application.Interfaces.Services.VisitasPerfil;
+using AgencyPlatform.Infrastructure.Services.VisitasPerfil;
+using AgencyPlatform.Application.Validators.VisitasPerfil;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +53,35 @@ builder.Services.AddScoped<IImagenPerfilService, ImagenPerfilService>();
 builder.Services.AddScoped<IEmailSender, EmailSender>();
 builder.Services.AddScoped<IPerfilRepository, PerfilRepository>();  // Añadido PerfilRepository
 builder.Services.AddScoped<IPerfilService, PerfilService>();
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<IClienteService, ClienteService>();
+
+builder.Services.AddScoped<IPuntoRepository, PuntoRepository>();
+builder.Services.AddScoped<IPuntoService, PuntoService>();
+
+builder.Services.AddScoped<ICuponService, CuponService>(); //Implementar 
+builder.Services.AddScoped<ICuponRepository, CuponRepository>();
+// Interfaces y servicios CuponesCliente
+builder.Services.AddScoped<ICuponesClienteRepository, CuponesClienteRepository>();
+builder.Services.AddScoped<ICuponesClienteService, CuponesClienteService>();
+
+builder.Services.AddScoped<IMembresiaVipService, MembresiaVipService>();
+builder.Services.AddScoped<IMembresiaVipRepository, MembresiaVipRepository>();
+
+builder.Services.AddScoped<ISuscripcionVipService, SuscripcionVipService>();
+builder.Services.AddScoped<ISuscripcionVipRepository, SuscripcionVipRepository>();
+
+builder.Services.AddScoped<IVisitasPerfilRepository, VisitasPerfilRepository>();
+builder.Services.AddScoped<IVisitasPerfilService, VisitasPerfilService>();
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+
+
+
+
+
+
+
 
 // ===== SERVICIO DE EMAIL =====
 builder.Services.AddScoped<IEmailSender, EmailSender>();
@@ -69,6 +109,18 @@ builder.Services.AddValidatorsFromAssemblyContaining<CrearPerfilDtoValidator>();
 
 builder.Services.AddValidatorsFromAssemblyContaining<CrearPerfilDtoValidator>();
 builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssemblyContaining<CrearCuponClienteValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<UpdateCuponClienteValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<CrearSuscripcionVipDtoValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<UpdateSuscripcionVipDtoValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<CrearVisitaPerfilDtoValidator>();
+
+
+
+
+//builder.Services.AddScoped<ICuponesClienteService, CuponesClienteService>();
+//builder.Services.AddScoped<ICuponesClienteRepository, CuponesClienteRepository>();
+
 
 builder.Services.AddHttpContextAccessor();
 

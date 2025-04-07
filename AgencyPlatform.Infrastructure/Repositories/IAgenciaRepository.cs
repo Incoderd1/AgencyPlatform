@@ -5,11 +5,11 @@ namespace AgencyPlatform.Application.Interfaces.Repositories
 {
     public interface IAgenciaRepository
     {
-        Task<IEnumerable<agencia>> GetAllAsync();
-        Task<agencia?> GetByIdAsync(int id);
-        Task<agencia?> GetByUserIdAsync(int userId);
-        Task<agencia> AddAsync(agencia agencia);
-        Task<agencia?> UpdateAsync(agencia agencia);
+        Task<IEnumerable<Agencia>> GetAllAsync();
+        Task<Agencia?> GetByIdAsync(int id);
+        Task<Agencia?> GetByUserIdAsync(int userId);
+        Task<Agencia> AddAsync(Agencia agencia);
+        Task<Agencia?> UpdateAsync(Agencia agencia);
         Task<bool> DeleteAsync(int id);
     }
 }

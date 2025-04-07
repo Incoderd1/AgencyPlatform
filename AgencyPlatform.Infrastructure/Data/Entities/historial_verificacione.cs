@@ -23,7 +23,7 @@ public partial class historial_verificacione
 
     public string? datos_adicionales { get; set; }
 
-    public virtual verificacione id_verificacionNavigation { get; set; } = null!;
+    public virtual Verificacione id_verificacionNavigation { get; set; } = null!;
 
-    public virtual usuario? realizado_porNavigation { get; set; }
+    public virtual Usuario? realizado_porNavigation { get; set; }
 }
