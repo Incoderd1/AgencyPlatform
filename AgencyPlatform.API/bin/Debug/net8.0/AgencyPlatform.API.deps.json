@@ -56,6 +56,19 @@
           }
         }
       },
+      "DeviceDetector.NET/6.4.2": {
+        "dependencies": {
+          "LiteDB": "5.0.21",
+          "Microsoft.Extensions.Logging.Abstractions": "9.0.3",
+          "YamlDotNet": "16.2.1"
+        },
+        "runtime": {
+          "lib/net8.0/DeviceDetector.NET.dll": {
+            "assemblyVersion": "6.4.2.0",
+            "fileVersion": "6.4.2.0"
+          }
+        }
+      },
       "FluentValidation/11.11.0": {
         "runtime": {
           "lib/net8.0/FluentValidation.dll": {
@@ -93,6 +106,17 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "LiteDB/5.0.21": {
+        "dependencies": {
+          "System.Buffers": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "assemblyVersion": "5.0.21.0",
+            "fileVersion": "5.0.21.0"
           }
         }
       },
@@ -913,6 +937,7 @@
           }
         }
       },
+      "System.Buffers/4.5.1": {},
       "System.CodeDom/6.0.0": {
         "runtime": {
           "lib/net6.0/System.CodeDom.dll": {
@@ -1045,6 +1070,14 @@
         }
       },
       "System.Threading.Channels/7.0.0": {},
+      "YamlDotNet/16.2.1": {
+        "runtime": {
+          "lib/net8.0/YamlDotNet.dll": {
+            "assemblyVersion": "16.0.0.0",
+            "fileVersion": "16.2.1.0"
+          }
+        }
+      },
       "AgencyPlatform.Application/1.0.0": {
         "dependencies": {
           "AgencyPlatform.Domain": "1.0.0",
@@ -1067,6 +1100,7 @@
           "AgencyPlatform.Application": "1.0.0",
           "AgencyPlatform.Domain": "1.0.0",
           "AgencyPlatform.Shared": "1.0.0",
+          "DeviceDetector.NET": "6.4.2",
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
           "Microsoft.EntityFrameworkCore": "9.0.3",
           "Microsoft.EntityFrameworkCore.Relational": "9.0.3",
@@ -1115,6 +1149,13 @@
       "path": "automapper.extensions.microsoft.dependencyinjection/12.0.1",
       "hashPath": "automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512"
     },
+    "DeviceDetector.NET/6.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/Vv2eIuA6cm640znvH8c/n9a3AwQTkgEtwMXQ5+Qp/DWtI6vT2tVZbpamB/BpIhedHgrTeQV8MTQGwTNPcE6Uw==",
+      "path": "devicedetector.net/6.4.2",
+      "hashPath": "devicedetector.net.6.4.2.nupkg.sha512"
+    },
     "FluentValidation/11.11.0": {
       "type": "package",
       "serviceable": true,
@@ -1142,6 +1183,13 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "LiteDB/5.0.21": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ykJ7ffFl7P9YQKR/PLci6zupiLrsSCNkOTiw6OtzntH7d2kCYp5L1+3a/pksKgTEHcJBoPXFtg7VZSGVBseN9w==",
+      "path": "litedb/5.0.21",
+      "hashPath": "litedb.5.0.21.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.2": {
       "type": "package",
@@ -1549,6 +1597,13 @@
       "path": "swashbuckle.aspnetcore.swaggerui/8.1.0",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.8.1.0.nupkg.sha512"
     },
+    "System.Buffers/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "path": "system.buffers/4.5.1",
+      "hashPath": "system.buffers.4.5.1.nupkg.sha512"
+    },
     "System.CodeDom/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1660,6 +1715,13 @@
       "sha512": "sha512-qmeeYNROMsONF6ndEZcIQ+VxR4Q/TX/7uIVLJqtwIWL7dDWeh0l1UIqgo4wYyjG//5lUNhwkLDSFl+pAWO6oiA==",
       "path": "system.threading.channels/7.0.0",
       "hashPath": "system.threading.channels.7.0.0.nupkg.sha512"
+    },
+    "YamlDotNet/16.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-im6zTVgesjcfTRfuMpnx51Rg2svWenp/3q5XBfcIzgj8PNIkkSD2xEl9HWcVi2SaJPP9XcXUdzed9gSDEuf1TA==",
+      "path": "yamldotnet/16.2.1",
+      "hashPath": "yamldotnet.16.2.1.nupkg.sha512"
     },
     "AgencyPlatform.Application/1.0.0": {
       "type": "project",

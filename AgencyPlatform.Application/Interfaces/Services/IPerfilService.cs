@@ -14,5 +14,7 @@ namespace AgencyPlatform.Application.Interfaces.Services
         Task<PerfilDto> CreateAsync(CrearPerfilDto dto);
         Task<PerfilDto?> UpdateAsync(int id, UpdatePerfilDto dto);
         Task<bool> DeleteAsync(int id);
+        Task<PerfilDetalleDto?> GetDetalleByIdAsync(int id);
+
     }
 }

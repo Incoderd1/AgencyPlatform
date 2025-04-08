@@ -49,5 +49,7 @@ namespace AgencyPlatform.Application.DTOs.Perfil
         public long NumContactos { get; set; }
         public decimal? PuntuacionInterna { get; set; }
         public string NivelPopularidad { get; set; } = null!;
+        public string? ImagenPrincipal { get; set; }
+
     }
 }

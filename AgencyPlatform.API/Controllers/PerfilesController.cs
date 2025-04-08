@@ -34,6 +34,17 @@ namespace AgencyPlatform.API.Controllers
                 return NotFound(); // Si no se encuentra el perfil, devuelve 404
             return Ok(perfil); // Devuelve el perfil si existe
         }
+        // Obtener el detalle del perfil con galería de imágenes
+        [HttpGet("{id}/detalle")]
+        [AllowAnonymous] // Opcional, útil si quieres que esté accesible sin autenticación
+        public async Task<IActionResult> GetDetalleById(int id)
+        {
+            var perfil = await _perfilService.GetDetalleByIdAsync(id);
+            if (perfil == null)
+                return NotFound(); // Si no se encuentra, devuelve 404
+            return Ok(perfil); // Devuelve el perfil detallado con galería
+        }
+
 
         // Crear un nuevo perfil
         [HttpPost]
@@ -67,7 +78,6 @@ namespace AgencyPlatform.API.Controllers
         }
 
         // Eliminar un perfil por ID
-        [Authorize]  // Asegura que el usuario esté autenticado para borrar
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

@@ -49,8 +49,8 @@ namespace AgencyPlatform.Infrastructure.Services
                 TipoUsuario = dto.TipoUsuario ?? "cliente",
                 MetodoAuth = "password",
                 Factor2fa = false,
-                Estado = "pendiente",
-                VerificadoEmail = false,
+                Estado = "activo",  // Marca el usuario como activo desde el inicio
+                VerificadoEmail = true,  // Marca el correo como verificado desde el inicio
                 FechaRegistro = now,
                 FechaActualizacion = now,
                 IpRegistro = ip,
@@ -58,17 +58,13 @@ namespace AgencyPlatform.Infrastructure.Services
             };
 
             var token = Guid.NewGuid().ToString("N");
-            user.TokenVerificacion = token;
-            user.FechaExpiracionToken = now.AddHours(24);
+            user.TokenVerificacion = token; // Aunque no lo vayas a usar, lo puedes mantener
+            user.FechaExpiracionToken = now.AddHours(24);  // Ajuste del tiempo del token de expiración
 
             await _userRepository.AddAsync(user);
             await _userRepository.SaveChangesAsync();
 
-            var verificationLink = $"{_config["Frontend:BaseUrl"]}/verificar?token={token}";
-            await _emailSender.SendEmailAsync(user.Email!, "Verifica tu cuenta",
-                $"Hola! Gracias por registrarte. Verifica tu correo haciendo clic aquí: <a href='{verificationLink}'>Verificar cuenta</a>");
-
-            return GenerateToken(user);
+            return GenerateToken(user); // Genera y devuelve el token de acceso
         }
 
         public async Task<AuthResponseDto> LoginAsync(LoginRequestDto dto)
@@ -80,12 +76,14 @@ namespace AgencyPlatform.Infrastructure.Services
             if (!PasswordHasher.VerifyPassword(dto.Password, user.Contrasena!, user.Salt!))
                 throw new UnauthorizedAccessException("La contraseña ingresada no es válida.");
 
+            // Eliminar la validación de correo verificado, ya que ahora la cuenta está activa al registrarse
             user.UltimoIp = _httpContextAccessor.HttpContext?.Connection?.RemoteIpAddress?.ToString();
             user.UltimoLogin = DateTime.UtcNow;
             await _userRepository.SaveChangesAsync();
 
-            return GenerateToken(user);
+            return GenerateToken(user); // Genera y devuelve el token de acceso
         }
+
 
         private AuthResponseDto GenerateToken(Usuario user)
         {
@@ -105,7 +103,7 @@ namespace AgencyPlatform.Infrastructure.Services
 
             var token = new JwtSecurityToken(
                 issuer: jwtIssuer,
-                audience: jwtIssuer,
+                audience: jwtIssuer, // Usamos jwtIssuer como audience, no necesitamos una variable separada 'audience'
                 claims: claims,
                 expires: DateTime.UtcNow.AddMinutes(jwtExpireMinutes),
                 signingCredentials: creds
@@ -120,31 +118,13 @@ namespace AgencyPlatform.Infrastructure.Services
             };
         }
 
-        public async Task<string> ConfirmEmailAsync(string token, int? userId = null)
+        public async Task<string> ConfirmEmailAsync(string token)
         {
-            if (userId.HasValue)
-            {
-                var userById = await _userRepository.GetByIdAsync(userId.Value);
-                if (userById == null)
-                    throw new ApplicationException("Usuario no encontrado.");
-
-                if (userById.VerificadoEmail)
-                    return "El correo ya está verificado.";
-
-                userById.VerificadoEmail = true;
-                userById.Estado = "activo";
-                userById.FechaActualizacion = DateTime.UtcNow;
-
-                await _userRepository.SaveChangesAsync();
-
-                return "Correo verificado correctamente.";
-            }
-
             var user = await _userRepository.Query()
                 .FirstOrDefaultAsync(u => u.TokenVerificacion == token && !u.VerificadoEmail);
 
             if (user == null)
-                throw new ApplicationException("Token inválido o expirado.");
+                throw new ApplicationException("Token inválido o el correo ya está verificado.");
 
             if (user.FechaExpiracionToken < DateTime.UtcNow)
                 throw new ApplicationException("El token ha expirado.");
@@ -170,14 +150,13 @@ namespace AgencyPlatform.Infrastructure.Services
             if (user.VerificadoEmail)
                 throw new ApplicationException("Este correo ya ha sido verificado.");
 
-            user.TokenVerificacion = TokenGenerator.GenerateToken();
-            user.FechaExpiracionToken = DateTime.UtcNow.AddHours(2);
+            user.TokenVerificacion = Guid.NewGuid().ToString("N");
+            user.FechaExpiracionToken = DateTime.UtcNow.AddHours(24);
             user.FechaActualizacion = DateTime.UtcNow;
 
             await _userRepository.SaveChangesAsync();
 
             var verificationLink = $"{_config["Frontend:BaseUrl"]}/verificar?token={user.TokenVerificacion}";
-
             await _emailSender.SendEmailAsync(user.Email!, "Reenvío de verificación",
                 $"Hola! Reenvío del enlace para verificar tu correo: <a href='{verificationLink}'>Verificar ahora</a>");
         }
@@ -188,14 +167,13 @@ namespace AgencyPlatform.Infrastructure.Services
             if (user == null)
                 throw new ApplicationException("El correo no está registrado.");
 
-            user.TokenVerificacion = TokenGenerator.GenerateToken();
+            user.TokenVerificacion = Guid.NewGuid().ToString("N");
             user.FechaExpiracionToken = DateTime.UtcNow.AddHours(2);
             user.FechaActualizacion = DateTime.UtcNow;
 
             await _userRepository.SaveChangesAsync();
 
             var resetLink = $"{_config["Frontend:BaseUrl"]}/reset-password?token={user.TokenVerificacion}";
-
             await _emailSender.SendEmailAsync(user.Email!, "Recuperación de contraseña",
                 $"<p>Haz clic en el siguiente enlace para restablecer tu contraseña:</p><a href='{resetLink}'>Restablecer ahora</a>");
         }
@@ -208,13 +186,12 @@ namespace AgencyPlatform.Infrastructure.Services
             if (user == null)
                 throw new ApplicationException("Token inválido o expirado.");
 
-            if (user.FechaActualizacion < DateTime.UtcNow)
+            if (user.FechaExpiracionToken < DateTime.UtcNow)
                 throw new ApplicationException("El token ha expirado.");
 
             var salt = PasswordHasher.GenerateSalt();
             user.Contrasena = PasswordHasher.HashPassword(dto.NewPassword, salt);
             user.Salt = salt;
-
             user.TokenVerificacion = null;
             user.FechaExpiracionToken = null;
             user.FechaActualizacion = DateTime.UtcNow;
@@ -245,6 +222,5 @@ namespace AgencyPlatform.Infrastructure.Services
 
             return await PaginationHelper.CreateAsync(query, page, pageSize);
         }
-
     }
 }

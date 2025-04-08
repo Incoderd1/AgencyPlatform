@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "E1MSry2fkk1yvYTfd9t8puj/3Zqrw6/EkzuPcI9cSYE=",
+  "Hash": "sXmGs27+kAb9inLI++0C6fZzzahfzXR5zukAAE/gYoM=",
   "Source": "AgencyPlatform.API",
   "BasePath": "_content/AgencyPlatform.API",
   "Mode": "Default",
@@ -205,6 +205,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\2025\\04\\04\\xnyqsdii.jwi.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\2025\\04\\08\\fn3nuay4.xyk.png",
+      "SourceId": "AgencyPlatform.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\",
+      "BasePath": "_content/AgencyPlatform.API",
+      "RelativePath": "uploads/2025/04/08/fn3nuay4.xyk.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\2025\\04\\08\\fn3nuay4.xyk.png"
     },
     {
       "Identity": "C:\\Users\\siric\\OneDrive\\Escritorio\\AgencyPlatform\\AgencyPlatform.API\\wwwroot\\uploads\\nkwhbgvs.d1x.jpg",

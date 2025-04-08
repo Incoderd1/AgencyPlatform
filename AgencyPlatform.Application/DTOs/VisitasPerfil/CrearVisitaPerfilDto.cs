@@ -10,10 +10,7 @@ namespace AgencyPlatform.Application.DTOs.VisitasPerfil
     {
         public int IdPerfil { get; set; }
         public long? IdCliente { get; set; }
-        public DateTime FechaVisita { get; set; }
-        public int? TiempoVisita { get; set; }
-        public string? Dispositivo { get; set; }
-        public string? Origen { get; set; }
+        public DateTime FechaVisita { get; set; } = DateTime.UtcNow; // Fecha actual por defecto
         public string? RegionGeografica { get; set; }
     }
 }

@@ -8,7 +8,6 @@ using System.Text.Json;
 
 [ApiController]
 [Route("api/[controller]")]
-[Authorize]
 public class ImagenPerfilController : ControllerBase
 {
     private readonly IImagenPerfilService _imagenPerfilService;

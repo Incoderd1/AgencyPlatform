@@ -20,17 +20,29 @@ namespace AgencyPlatform.API.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequestDto dto)
         {
-            var response = await _userService.RegisterAsync(dto);
-            // Enviar correo de verificación automáticamente después del registro
-            await _userService.ResendVerificationEmailAsync(dto.Email);
-            return Ok(response);
+            try
+            {
+                var response = await _userService.RegisterAsync(dto);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = true, message = ex.Message });
+            }
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto dto)
         {
-            var response = await _userService.LoginAsync(dto);
-            return Ok(response);
+            try
+            {
+                var response = await _userService.LoginAsync(dto);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = true, message = ex.Message });
+            }
         }
 
         [Authorize]
@@ -56,61 +68,60 @@ namespace AgencyPlatform.API.Controllers
             return Ok(result);
         }
 
-        [HttpPost("confirm-email")]
-        public async Task<IActionResult> ConfirmEmail([FromBody] ConfirmEmailRequestDto dto)
-        {
-            try
-            {
-                string result;
-
-                // Si se proporciona un token, usar ese token
-                if (!string.IsNullOrEmpty(dto.Token))
-                {
-                    result = await _userService.ConfirmEmailAsync(dto.Token);
-                }
-                // Si no hay token pero el usuario está autenticado, usar su ID
-                else if (User.Identity.IsAuthenticated)
-                {
-                    var userId = User.FindFirst("id")?.Value;
-                    if (string.IsNullOrEmpty(userId) || !int.TryParse(userId, out int id))
-                    {
-                        return BadRequest(new { error = true, message = "No se pudo identificar al usuario." });
-                    }
-
-                    result = await _userService.ConfirmEmailAsync(null, id);
-                }
-                else
-                {
-                    return BadRequest(new { error = true, message = "Se requiere un token de verificación o estar autenticado." });
-                }
-
-                return Ok(new { message = result });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(500, new { error = true, message = ex.Message });
-            }
-        }
-
         [HttpPost("resend-verification")]
         public async Task<IActionResult> ResendVerification([FromBody] ResendVerificationEmailDto dto)
         {
-            await _userService.ResendVerificationEmailAsync(dto.Email);
-            return Ok(new { message = "Correo de verificación reenviado correctamente." });
+            try
+            {
+                await _userService.ResendVerificationEmailAsync(dto.Email);
+                return Ok(new { message = "Correo de verificación reenviado correctamente." });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = true, message = ex.Message });
+            }
         }
 
         [HttpPost("forgot-password")]
         public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordRequestDto dto)
         {
-            await _userService.ForgotPasswordAsync(dto);
-            return Ok(new { message = "Correo de recuperación enviado correctamente." });
+            try
+            {
+                await _userService.ForgotPasswordAsync(dto);
+                return Ok(new { message = "Correo de recuperación enviado correctamente." });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = true, message = ex.Message });
+            }
         }
 
         [HttpPost("reset-password")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordRequestDto dto)
         {
-            await _userService.ResetPasswordAsync(dto);
-            return Ok(new { message = "Contraseña restablecida correctamente." });
+            try
+            {
+                await _userService.ResetPasswordAsync(dto);
+                return Ok(new { message = "Contraseña restablecida correctamente." });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = true, message = ex.Message });
+            }
+        }
+
+        [HttpGet("verify")]
+        public async Task<IActionResult> VerifyEmail([FromQuery] string token)
+        {
+            try
+            {
+                var result = await _userService.ConfirmEmailAsync(token);
+                return Ok(new { message = result });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = true, message = ex.Message });
+            }
         }
     }
 }

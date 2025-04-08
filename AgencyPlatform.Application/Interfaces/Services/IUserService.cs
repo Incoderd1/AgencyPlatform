@@ -14,10 +14,10 @@ namespace AgencyPlatform.Application.Interfaces.Services
         Task<AuthResponseDto> RegisterAsync(RegisterRequestDto dto);
         Task<AuthResponseDto> LoginAsync(LoginRequestDto dto);
         Task<PaginatedResult<UserDto>> GetUsersAsync(int page, int pageSize);
-        Task<string> ConfirmEmailAsync(string token, int? userId = null);
         Task ResendVerificationEmailAsync(string email);
         Task ForgotPasswordAsync(ForgotPasswordRequestDto dto);
         Task ResetPasswordAsync(ResetPasswordRequestDto dto);
+        Task<string> ConfirmEmailAsync(string token);
 
 
 

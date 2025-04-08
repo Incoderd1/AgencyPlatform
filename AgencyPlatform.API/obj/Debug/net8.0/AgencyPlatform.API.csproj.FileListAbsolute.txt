@@ -170,3 +170,6 @@ C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\n
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\net8.0\AgencyPlatform.API.pdb
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\net8.0\AgencyPlatform.API.genruntimeconfig.cache
 C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\obj\Debug\net8.0\ref\AgencyPlatform.API.dll
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\DeviceDetector.NET.dll
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\LiteDB.dll
+C:\Users\siric\OneDrive\Escritorio\AgencyPlatform\AgencyPlatform.API\bin\Debug\net8.0\YamlDotNet.dll

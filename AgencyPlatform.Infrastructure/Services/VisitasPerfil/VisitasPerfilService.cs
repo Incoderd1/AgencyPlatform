@@ -1,7 +1,9 @@
-﻿using AgencyPlatform.Application.DTOs.VisitasPerfil;
+﻿using DeviceDetectorNET;
+using AgencyPlatform.Infrastructure.Data.Entities;
+using AgencyPlatform.Application.DTOs.VisitasPerfil;
 using AgencyPlatform.Application.Interfaces.Services.VisitasPerfil;
 using AgencyPlatform.Infrastructure.Repositories;
-using Microsoft.AspNetCore.Http;  // Asegúrate de agregar este espacio de nombres
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,13 +14,12 @@ namespace AgencyPlatform.Infrastructure.Services.VisitasPerfil
     public class VisitasPerfilService : IVisitasPerfilService
     {
         private readonly IVisitasPerfilRepository _repository;
-        private readonly IHttpContextAccessor _httpContextAccessor;  // Agregamos IHttpContextAccessor
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        // Inyectar IHttpContextAccessor en el constructor
         public VisitasPerfilService(IVisitasPerfilRepository repository, IHttpContextAccessor httpContextAccessor)
         {
             _repository = repository;
-            _httpContextAccessor = httpContextAccessor;  // Asignamos el valor del IHttpContextAccessor
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public async Task<List<VisitaPerfilDto>> ObtenerTodasAsync()
@@ -35,12 +36,24 @@ namespace AgencyPlatform.Infrastructure.Services.VisitasPerfil
 
         public async Task<VisitaPerfilDto> CrearAsync(CrearVisitaPerfilDto dto)
         {
-            // Usar IHttpContextAccessor para obtener IP y UserAgent
             var httpContext = _httpContextAccessor.HttpContext;
 
+            // Obtener la IP automáticamente
             string ip = httpContext?.Connection?.RemoteIpAddress?.ToString() ?? "Desconocida";
+
+            // Obtener el User-Agent automáticamente
             string userAgent = httpContext?.Request?.Headers["User-Agent"].ToString() ?? "Desconocido";
 
+            // Analizar el User-Agent para detectar el dispositivo
+            string dispositivo = DetectDevice(userAgent);
+
+            // Calcular el tiempo de visita, en este caso podemos poner un valor fijo
+            int tiempoVisita = 60; // O puedes agregar una lógica para calcularlo
+
+            // Obtener el origen (en este caso lo dejamos como "web")
+            string origen = "web";
+
+            // Crear la entidad con los valores calculados y automáticos
             var entidad = new AgencyPlatform.Infrastructure.Data.Entities.VisitasPerfil
             {
                 IdPerfil = dto.IdPerfil,
@@ -48,9 +61,9 @@ namespace AgencyPlatform.Infrastructure.Services.VisitasPerfil
                 FechaVisita = DateTime.UtcNow,
                 IpVisitante = ip,
                 UserAgent = userAgent,
-                TiempoVisita = dto.TiempoVisita,
-                Dispositivo = dto.Dispositivo,
-                Origen = dto.Origen,
+                TiempoVisita = tiempoVisita,
+                Dispositivo = dispositivo,
+                Origen = origen,
                 RegionGeografica = dto.RegionGeografica
             };
 
@@ -74,6 +87,30 @@ namespace AgencyPlatform.Infrastructure.Services.VisitasPerfil
         public async Task<int> ContarVisitasPorPerfil(int idPerfil)
         {
             return await _repository.ContarVisitasPorPerfil(idPerfil);
+        }
+
+        // Método para detectar el dispositivo a partir del User-Agent
+        private string DetectDevice(string userAgent)
+        {
+            var deviceDetector = new DeviceDetector(userAgent);
+            deviceDetector.Parse();
+
+            if (deviceDetector.IsBot())
+            {
+                return "Bot"; // Si es un bot
+            }
+
+            if (deviceDetector.IsMobile())
+            {
+                return "Mobile"; // Si es un dispositivo móvil
+            }
+
+            if (deviceDetector.IsTablet())
+            {
+                return "Tablet"; // Si es una tablet
+            }
+
+            return "Desktop"; // Si no es ninguno de los anteriores, es un desktop
         }
 
         private static VisitaPerfilDto MapToDto(AgencyPlatform.Infrastructure.Data.Entities.VisitasPerfil v) => new()

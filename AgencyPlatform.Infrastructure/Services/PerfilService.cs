@@ -19,8 +19,24 @@ namespace AgencyPlatform.Infrastructure.Services
 
         public async Task<IEnumerable<PerfilDto>> GetAllAsync()
         {
-            var perfiles = await _perfilRepository.Query().ToListAsync();
-            return perfiles.Select(MapToDto).ToList();
+            var perfiles = await _perfilRepository.Query()
+        .Include(p => p.ImagenesPerfils)
+        .Where(p => p.Estado == "activo") // solo los activos
+        .ToListAsync();
+
+            return perfiles.Select(p =>
+            {
+                var dto = MapToDto(p);
+
+                // Buscar imagen principal
+                var img = p.ImagenesPerfils
+                    .Where(i => i.EsPrincipal && i.Estado == "aprobado")
+                    .OrderBy(i => i.Orden)
+                    .FirstOrDefault();
+
+                dto.ImagenPrincipal = img?.UrlImagen;
+                return dto;
+            }).ToList();
         }
 
         public async Task<PerfilDto?> GetByIdAsync(int id)
@@ -96,6 +112,29 @@ namespace AgencyPlatform.Infrastructure.Services
 
             return MapToDto(perfil);
         }
+        public async Task<PerfilDetalleDto?> GetDetalleByIdAsync(int id)
+        {
+            var perfil = await _perfilRepository.Query()
+                .Include(p => p.ImagenesPerfils)
+                .FirstOrDefaultAsync(p => p.IdPerfil == id);
+
+            if (perfil == null) return null;
+
+            return new PerfilDetalleDto
+            {
+                IdPerfil = perfil.IdPerfil,
+                NombrePerfil = perfil.NombrePerfil,
+                Descripcion = perfil.Descripcion,
+                TelefonoContacto = perfil.TelefonoContacto,
+                Whatsapp = perfil.Whatsapp,
+                GaleriaImagenes = perfil.ImagenesPerfils
+                    .Where(i => i.Estado == "aprobado")
+                    .OrderBy(i => i.Orden)
+                    .Select(i => i.UrlImagen)
+                    .ToList()
+            };
+        }
+
 
         public async Task<PerfilDto?> UpdateAsync(int id, UpdatePerfilDto dto)
         {

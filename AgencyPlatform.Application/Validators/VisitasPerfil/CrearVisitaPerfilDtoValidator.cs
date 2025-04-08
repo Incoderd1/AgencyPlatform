@@ -23,8 +23,6 @@ namespace AgencyPlatform.Application.Validators.VisitasPerfil
                 .NotEmpty().WithMessage("La FechaVisita no puede ser vacía.")
                 .LessThanOrEqualTo(DateTime.UtcNow).WithMessage("La FechaVisita no puede ser en el futuro.");
 
-            RuleFor(x => x.TiempoVisita)
-                .GreaterThan(0).WithMessage("El tiempo de la visita debe ser mayor que 0.");
         }
     }
 }

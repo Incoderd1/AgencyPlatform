@@ -329,6 +329,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "DeviceDetector.NET": {
+              "target": "Package",
+              "version": "[6.4.2, )"
+            },
             "Microsoft.AspNetCore.Http.Abstractions": {
               "target": "Package",
               "version": "[2.3.0, )"
